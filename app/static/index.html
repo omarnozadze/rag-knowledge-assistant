@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RAG Knowledge Assistant</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 1000px; margin: 40px auto; padding: 0 20px; background:#fafafa; color:#222; }
+    h1 { margin-bottom: 4px; }
+    .muted { color:#666; }
+    .card { background:white; border:1px solid #ddd; border-radius:12px; padding:18px; margin:16px 0; }
+    textarea { width:100%; min-height:110px; padding:12px; box-sizing:border-box; }
+    button { padding:10px 16px; cursor:pointer; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f4f4f4; padding:12px; border-radius:8px; }
+    .source { border-left:3px solid #999; padding-left:12px; margin:10px 0; white-space:pre-wrap; }
+    .source b { display:block; margin-bottom:4px; }
+    .status { color:#666; font-size:14px; min-height:1.2em; }
+    .error { color:#b00020; white-space:pre-wrap; }
+    .answer { background:#f4f4f4; padding:4px 14px; border-radius:8px; line-height:1.5; min-height:1em; }
+    .answer p { margin:10px 0; }
+    .answer ul, .answer ol { margin:8px 0; padding-left:24px; }
+    .answer code { background:#e6e6e6; padding:1px 4px; border-radius:4px; }
+    .answer h4, .answer h5, .answer h6 { margin:12px 0 6px; }
+    a.cite { text-decoration:none; font-size:0.85em; vertical-align:super; }
+    .source:target { background:#fff6d6; }
+    label { margin-left:12px; font-size:14px; }
+  </style>
+</head>
+<body>
+  <h1>RAG Knowledge Assistant</h1>
+  <div class="muted">Upload private documents, then ask grounded questions with citations.</div>
+
+  <div class="card">
+    <h3>1. Upload document</h3>
+    <input id="file" type="file" accept=".pdf,.docx,.txt,.md" />
+    <button onclick="upload()">Upload & index</button>
+    <pre id="uploadResult"></pre>
+  </div>
+
+  <div class="card">
+    <h3>Indexed documents</h3>
+    <button onclick="loadDocs()">Refresh</button>
+    <pre id="docs"></pre>
+  </div>
+
+  <div class="card">
+    <h3>2. Ask a question</h3>
+    <textarea id="question" placeholder="Ask something that is answered by your uploaded documents..."></textarea>
+    <button id="askButton" onclick="ask()">Ask</button>
+    <label title="Also search with the question translated into the documents' other language (adds a few seconds)">
+      <input id="translate" type="checkbox" /> Translate question
+    </label>
+    <h4>Answer</h4>
+    <div id="status" class="status"></div>
+    <div id="answer" class="answer"></div>
+    <h4>Sources</h4>
+    <div id="sources"></div>
+  </div>
+
+<script src="/static/markdown.js"></script>
+<script>
+async function upload() {
+  const input = document.getElementById('file');
+  if (!input.files.length) return;
+  const fd = new FormData();
+  fd.append('file', input.files[0]);
+
+  const out = document.getElementById('uploadResult');
+  out.textContent = 'Indexing...';
+
+  const res = await fetch('/api/documents/upload', {method:'POST', body:fd});
+  const data = await res.json();
+  out.textContent = JSON.stringify(data, null, 2);
+  await loadDocs();
+}
+
+async function loadDocs() {
+  const res = await fetch('/api/documents');
+  const data = await res.json();
+  document.getElementById('docs').textContent = JSON.stringify(data, null, 2);
+}
+
+// The answer arrives as Server-Sent Events from /api/ask/stream:
+//   citations -> delta (many) -> done, or error instead of done.
+// EventSource only supports GET, so the stream is read with fetch.
+function parseEvent(raw) {
+  let event = 'message', data = '';
+  for (const line of raw.split('\n')) {
+    if (line.startsWith('event:')) event = line.slice(6).trim();
+    else if (line.startsWith('data:')) data += line.slice(5).trim();
+  }
+  return {event, data: data ? JSON.parse(data) : null};
+}
+
+function showSources(citations) {
+  const box = document.getElementById('sources');
+  box.replaceChildren();
+  citations.forEach((c, i) => {
+    const div = document.createElement('div');
+    div.className = 'source';
+    div.id = `source-${i + 1}`;  // target of the [n] links in the answer
+    const title = document.createElement('b');
+    title.textContent = `[${i + 1}] ${c.filename}${c.page_number ? ' — page ' + c.page_number : ''}`;
+    div.appendChild(title);
+    div.appendChild(document.createTextNode(c.excerpt));
+    box.appendChild(div);
+  });
+}
+
+async function ask() {
+  const q = document.getElementById('question').value.trim();
+  if (!q) return;
+
+  const answer = document.getElementById('answer');
+  const status = document.getElementById('status');
+  const button = document.getElementById('askButton');
+  let answerText = '';  // raw markdown so far; re-rendered on every delta
+  const showError = (message) => {
+    const p = document.createElement('p');
+    p.className = 'error';
+    p.textContent = message;
+    answer.appendChild(p);
+    status.textContent = '';
+  };
+  answer.replaceChildren();
+  document.getElementById('sources').replaceChildren();
+  status.textContent = 'Searching documents...';
+  button.disabled = true;
+  const started = performance.now();
+  const seconds = () => ((performance.now() - started) / 1000).toFixed(1);
+  let firstWords = null;
+
+  try {
+    const res = await fetch('/api/ask/stream', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({question: q, translate: document.getElementById('translate').checked})
+    });
+    if (!res.ok) {
+      showError(JSON.stringify(await res.json(), null, 2));
+      return;
+    }
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+    while (true) {
+      const {value, done} = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, {stream: true});
+      let end;
+      while ((end = buffer.indexOf('\n\n')) !== -1) {
+        const {event, data} = parseEvent(buffer.slice(0, end));
+        buffer = buffer.slice(end + 2);
+
+        if (event === 'citations') {
+          showSources(data);
+          status.textContent = 'Writing answer...';
+        } else if (event === 'delta') {
+          if (firstWords === null) firstWords = seconds();
+          answerText += data.text;
+          Markdown.render(answerText, answer);
+        } else if (event === 'done') {
+          status.textContent = `Done in ${seconds()} s` + (firstWords ? ` (first words after ${firstWords} s)` : '');
+        } else if (event === 'error') {
+          showError(data.detail);
+        }
+      }
+    }
+  } catch (err) {
+    showError('Connection error: ' + err.message);
+  } finally {
+    button.disabled = false;
+  }
+}
+loadDocs();
+</script>
+</body>
+</html>

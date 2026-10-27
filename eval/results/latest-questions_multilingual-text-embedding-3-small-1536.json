@@ -1,0 +1,2069 @@
+{
+  "timestamp": "2026-10-27T15:43:15",
+  "question_set": "questions_multilingual",
+  "embeddings": "openai",
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dim": 1536,
+  "config": "text-embedding-3-small-1536",
+  "query_translation": false,
+  "translation_model": null,
+  "k": 5,
+  "documents": 7,
+  "questions": 17,
+  "overall": {
+    "vector": {
+      "n": 17,
+      "hit@1": 0.058823529411764705,
+      "hit@3": 0.23529411764705882,
+      "hit@5": 0.47058823529411764,
+      "mrr": 0.17058823529411765,
+      "doc_hit@1": 0.17647058823529413,
+      "latency_p50_ms": 1.35,
+      "latency_p95_ms": 47.57
+    },
+    "hybrid": {
+      "n": 17,
+      "hit@1": 0.17647058823529413,
+      "hit@3": 0.29411764705882354,
+      "hit@5": 0.47058823529411764,
+      "mrr": 0.25392156862745097,
+      "doc_hit@1": 0.23529411764705882,
+      "latency_p50_ms": 1.1,
+      "latency_p95_ms": 1.25
+    }
+  },
+  "by_tag": {
+    "vector": {
+      "cross-lingual": {
+        "n": 13,
+        "hit@1": 0.0,
+        "hit@3": 0.07692307692307693,
+        "hit@5": 0.3076923076923077,
+        "mrr": 0.07564102564102565,
+        "doc_hit@1": 0.0,
+        "latency_p50_ms": 1.56,
+        "latency_p95_ms": 47.57
+      },
+      "en->ka": {
+        "n": 4,
+        "hit@1": 0.0,
+        "hit@3": 0.25,
+        "hit@5": 1.0,
+        "mrr": 0.24583333333333335,
+        "doc_hit@1": 0.0,
+        "latency_p50_ms": 1.175,
+        "latency_p95_ms": 1.56
+      },
+      "ka": {
+        "n": 13,
+        "hit@1": 0.07692307692307693,
+        "hit@3": 0.23076923076923078,
+        "hit@5": 0.3076923076923077,
+        "mrr": 0.1474358974358974,
+        "doc_hit@1": 0.23076923076923078,
+        "latency_p50_ms": 1.55,
+        "latency_p95_ms": 47.57
+      },
+      "ka->en": {
+        "n": 9,
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.0,
+        "doc_hit@1": 0.0,
+        "latency_p50_ms": 46.25,
+        "latency_p95_ms": 47.89
+      },
+      "ka->ka": {
+        "n": 4,
+        "hit@1": 0.25,
+        "hit@3": 0.75,
+        "hit@5": 1.0,
+        "mrr": 0.47916666666666663,
+        "doc_hit@1": 0.75,
+        "latency_p50_ms": 0.925,
+        "latency_p95_ms": 1.06
+      }
+    },
+    "hybrid": {
+      "cross-lingual": {
+        "n": 13,
+        "hit@1": 0.0,
+        "hit@3": 0.07692307692307693,
+        "hit@5": 0.3076923076923077,
+        "mrr": 0.07564102564102565,
+        "doc_hit@1": 0.0,
+        "latency_p50_ms": 1.12,
+        "latency_p95_ms": 1.25
+      },
+      "en->ka": {
+        "n": 4,
+        "hit@1": 0.0,
+        "hit@3": 0.25,
+        "hit@5": 1.0,
+        "mrr": 0.24583333333333335,
+        "doc_hit@1": 0.0,
+        "latency_p50_ms": 1.09,
+        "latency_p95_ms": 1.16
+      },
+      "ka": {
+        "n": 13,
+        "hit@1": 0.23076923076923078,
+        "hit@3": 0.3076923076923077,
+        "hit@5": 0.3076923076923077,
+        "mrr": 0.25641025641025644,
+        "doc_hit@1": 0.3076923076923077,
+        "latency_p50_ms": 1.1,
+        "latency_p95_ms": 1.25
+      },
+      "ka->en": {
+        "n": 9,
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.0,
+        "doc_hit@1": 0.0,
+        "latency_p50_ms": 1.16,
+        "latency_p95_ms": 1.25
+      },
+      "ka->ka": {
+        "n": 4,
+        "hit@1": 0.75,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.8333333333333334,
+        "doc_hit@1": 1.0,
+        "latency_p50_ms": 1.08,
+        "latency_p95_ms": 1.17
+      }
+    }
+  },
+  "per_question": {
+    "vector": [
+      {
+        "id": "m01",
+        "question": "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?",
+        "variants": [
+          "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 46.25,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?"
+          }
+        ]
+      },
+      {
+        "id": "m02",
+        "question": "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?",
+        "variants": [
+          "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 46.45,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?"
+          }
+        ]
+      },
+      {
+        "id": "m03",
+        "question": "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?",
+        "variants": [
+          "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": 5,
+        "latency_ms": 47.89,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?"
+          }
+        ]
+      },
+      {
+        "id": "m04",
+        "question": "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?",
+        "variants": [
+          "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 47.12,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?"
+          }
+        ]
+      },
+      {
+        "id": "m05",
+        "question": "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?",
+        "variants": [
+          "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 47.57,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?"
+          }
+        ]
+      },
+      {
+        "id": "m06",
+        "question": "რა სიგრძის უნდა იყოს პაროლი?",
+        "variants": [
+          "რა სიგრძის უნდა იყოს პაროლი?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 2.75,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა სიგრძის უნდა იყოს პაროლი?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა სიგრძის უნდა იყოს პაროლი?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა სიგრძის უნდა იყოს პაროლი?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა სიგრძის უნდა იყოს პაროლი?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა სიგრძის უნდა იყოს პაროლი?"
+          }
+        ]
+      },
+      {
+        "id": "m07",
+        "question": "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?",
+        "variants": [
+          "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.55,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?"
+          }
+        ]
+      },
+      {
+        "id": "m08",
+        "question": "ტაქსის ხარჯი როდის ანაზღაურდება?",
+        "variants": [
+          "ტაქსის ხარჯი როდის ანაზღაურდება?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.26,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "ტაქსის ხარჯი როდის ანაზღაურდება?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "ტაქსის ხარჯი როდის ანაზღაურდება?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "ტაქსის ხარჯი როდის ანაზღაურდება?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "ტაქსის ხარჯი როდის ანაზღაურდება?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "ტაქსის ხარჯი როდის ანაზღაურდება?"
+          }
+        ]
+      },
+      {
+        "id": "m09",
+        "question": "საეჭვო ელფოსტა როგორ შევატყობინო?",
+        "variants": [
+          "საეჭვო ელფოსტა როგორ შევატყობინო?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.26,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "საეჭვო ელფოსტა როგორ შევატყობინო?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "საეჭვო ელფოსტა როგორ შევატყობინო?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "საეჭვო ელფოსტა როგორ შევატყობინო?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "საეჭვო ელფოსტა როგორ შევატყობინო?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "საეჭვო ელფოსტა როგორ შევატყობინო?"
+          }
+        ]
+      },
+      {
+        "id": "m10",
+        "question": "When are supplier deliveries accepted at the warehouse?",
+        "variants": [
+          "When are supplier deliveries accepted at the warehouse?"
+        ],
+        "tags": [
+          "cross-lingual",
+          "en->ka"
+        ],
+        "hit_rank": 3,
+        "doc_rank": 3,
+        "latency_ms": 1.56,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "When are supplier deliveries accepted at the warehouse?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "When are supplier deliveries accepted at the warehouse?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "When are supplier deliveries accepted at the warehouse?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "When are supplier deliveries accepted at the warehouse?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "When are supplier deliveries accepted at the warehouse?"
+          }
+        ]
+      },
+      {
+        "id": "m11",
+        "question": "Where should damaged goods be stored?",
+        "variants": [
+          "Where should damaged goods be stored?"
+        ],
+        "tags": [
+          "cross-lingual",
+          "en->ka"
+        ],
+        "hit_rank": 5,
+        "doc_rank": 5,
+        "latency_ms": 1.35,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Where should damaged goods be stored?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Where should damaged goods be stored?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Where should damaged goods be stored?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Where should damaged goods be stored?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Where should damaged goods be stored?"
+          }
+        ]
+      },
+      {
+        "id": "m12",
+        "question": "What time does a new employee arrive on the first day?",
+        "variants": [
+          "What time does a new employee arrive on the first day?"
+        ],
+        "tags": [
+          "cross-lingual",
+          "en->ka"
+        ],
+        "hit_rank": 5,
+        "doc_rank": 5,
+        "latency_ms": 0.89,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "What time does a new employee arrive on the first day?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "What time does a new employee arrive on the first day?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "What time does a new employee arrive on the first day?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "What time does a new employee arrive on the first day?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "What time does a new employee arrive on the first day?"
+          }
+        ]
+      },
+      {
+        "id": "m13",
+        "question": "How often does a new hire meet their mentor?",
+        "variants": [
+          "How often does a new hire meet their mentor?"
+        ],
+        "tags": [
+          "cross-lingual",
+          "en->ka"
+        ],
+        "hit_rank": 4,
+        "doc_rank": 4,
+        "latency_ms": 1.0,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How often does a new hire meet their mentor?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How often does a new hire meet their mentor?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How often does a new hire meet their mentor?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How often does a new hire meet their mentor?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How often does a new hire meet their mentor?"
+          }
+        ]
+      },
+      {
+        "id": "m14",
+        "question": "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?",
+        "variants": [
+          "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?"
+        ],
+        "tags": [
+          "ka",
+          "ka->ka"
+        ],
+        "hit_rank": 3,
+        "doc_rank": 1,
+        "latency_ms": 1.06,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?"
+          }
+        ]
+      },
+      {
+        "id": "m15",
+        "question": "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?",
+        "variants": [
+          "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?"
+        ],
+        "tags": [
+          "ka",
+          "ka->ka"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.9,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?"
+          }
+        ]
+      },
+      {
+        "id": "m16",
+        "question": "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?",
+        "variants": [
+          "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?"
+        ],
+        "tags": [
+          "ka",
+          "ka->ka"
+        ],
+        "hit_rank": 4,
+        "doc_rank": 1,
+        "latency_ms": 0.91,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?"
+          }
+        ]
+      },
+      {
+        "id": "m17",
+        "question": "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?",
+        "variants": [
+          "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?"
+        ],
+        "tags": [
+          "ka",
+          "ka->ka"
+        ],
+        "hit_rank": 3,
+        "doc_rank": 2,
+        "latency_ms": 0.94,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?"
+          }
+        ]
+      }
+    ],
+    "hybrid": [
+      {
+        "id": "m01",
+        "question": "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?",
+        "variants": [
+          "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.25,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?"
+          }
+        ]
+      },
+      {
+        "id": "m02",
+        "question": "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?",
+        "variants": [
+          "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.16,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?"
+          }
+        ]
+      },
+      {
+        "id": "m03",
+        "question": "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?",
+        "variants": [
+          "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": 5,
+        "latency_ms": 1.07,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0323,
+            "vector_rank": 3,
+            "keyword_rank": 1,
+            "matched_query": "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?"
+          }
+        ]
+      },
+      {
+        "id": "m04",
+        "question": "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?",
+        "variants": [
+          "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.08,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?"
+          }
+        ]
+      },
+      {
+        "id": "m05",
+        "question": "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?",
+        "variants": [
+          "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.17,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?"
+          }
+        ]
+      },
+      {
+        "id": "m06",
+        "question": "რა სიგრძის უნდა იყოს პაროლი?",
+        "variants": [
+          "რა სიგრძის უნდა იყოს პაროლი?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.04,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა სიგრძის უნდა იყოს პაროლი?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა სიგრძის უნდა იყოს პაროლი?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა სიგრძის უნდა იყოს პაროლი?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა სიგრძის უნდა იყოს პაროლი?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა სიგრძის უნდა იყოს პაროლი?"
+          }
+        ]
+      },
+      {
+        "id": "m07",
+        "question": "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?",
+        "variants": [
+          "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.01,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?"
+          }
+        ]
+      },
+      {
+        "id": "m08",
+        "question": "ტაქსის ხარჯი როდის ანაზღაურდება?",
+        "variants": [
+          "ტაქსის ხარჯი როდის ანაზღაურდება?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.25,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "ტაქსის ხარჯი როდის ანაზღაურდება?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "ტაქსის ხარჯი როდის ანაზღაურდება?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "ტაქსის ხარჯი როდის ანაზღაურდება?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "ტაქსის ხარჯი როდის ანაზღაურდება?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "ტაქსის ხარჯი როდის ანაზღაურდება?"
+          }
+        ]
+      },
+      {
+        "id": "m09",
+        "question": "საეჭვო ელფოსტა როგორ შევატყობინო?",
+        "variants": [
+          "საეჭვო ელფოსტა როგორ შევატყობინო?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual",
+          "ka->en"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.16,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "საეჭვო ელფოსტა როგორ შევატყობინო?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "საეჭვო ელფოსტა როგორ შევატყობინო?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "საეჭვო ელფოსტა როგორ შევატყობინო?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "საეჭვო ელფოსტა როგორ შევატყობინო?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "საეჭვო ელფოსტა როგორ შევატყობინო?"
+          }
+        ]
+      },
+      {
+        "id": "m10",
+        "question": "When are supplier deliveries accepted at the warehouse?",
+        "variants": [
+          "When are supplier deliveries accepted at the warehouse?"
+        ],
+        "tags": [
+          "cross-lingual",
+          "en->ka"
+        ],
+        "hit_rank": 3,
+        "doc_rank": 3,
+        "latency_ms": 1.05,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "When are supplier deliveries accepted at the warehouse?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0323,
+            "vector_rank": 2,
+            "keyword_rank": 2,
+            "matched_query": "When are supplier deliveries accepted at the warehouse?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "When are supplier deliveries accepted at the warehouse?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "When are supplier deliveries accepted at the warehouse?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "When are supplier deliveries accepted at the warehouse?"
+          }
+        ]
+      },
+      {
+        "id": "m11",
+        "question": "Where should damaged goods be stored?",
+        "variants": [
+          "Where should damaged goods be stored?"
+        ],
+        "tags": [
+          "cross-lingual",
+          "en->ka"
+        ],
+        "hit_rank": 5,
+        "doc_rank": 5,
+        "latency_ms": 1.06,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Where should damaged goods be stored?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Where should damaged goods be stored?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Where should damaged goods be stored?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Where should damaged goods be stored?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Where should damaged goods be stored?"
+          }
+        ]
+      },
+      {
+        "id": "m12",
+        "question": "What time does a new employee arrive on the first day?",
+        "variants": [
+          "What time does a new employee arrive on the first day?"
+        ],
+        "tags": [
+          "cross-lingual",
+          "en->ka"
+        ],
+        "hit_rank": 5,
+        "doc_rank": 5,
+        "latency_ms": 1.16,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "What time does a new employee arrive on the first day?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "What time does a new employee arrive on the first day?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "What time does a new employee arrive on the first day?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "What time does a new employee arrive on the first day?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "What time does a new employee arrive on the first day?"
+          }
+        ]
+      },
+      {
+        "id": "m13",
+        "question": "How often does a new hire meet their mentor?",
+        "variants": [
+          "How often does a new hire meet their mentor?"
+        ],
+        "tags": [
+          "cross-lingual",
+          "en->ka"
+        ],
+        "hit_rank": 4,
+        "doc_rank": 4,
+        "latency_ms": 1.12,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How often does a new hire meet their mentor?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How often does a new hire meet their mentor?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How often does a new hire meet their mentor?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How often does a new hire meet their mentor?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How often does a new hire meet their mentor?"
+          }
+        ]
+      },
+      {
+        "id": "m14",
+        "question": "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?",
+        "variants": [
+          "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?"
+        ],
+        "tags": [
+          "ka",
+          "ka->ka"
+        ],
+        "hit_rank": 3,
+        "doc_rank": 1,
+        "latency_ms": 1.06,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?"
+          }
+        ]
+      },
+      {
+        "id": "m15",
+        "question": "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?",
+        "variants": [
+          "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?"
+        ],
+        "tags": [
+          "ka",
+          "ka->ka"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.1,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?"
+          }
+        ]
+      },
+      {
+        "id": "m16",
+        "question": "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?",
+        "variants": [
+          "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?"
+        ],
+        "tags": [
+          "ka",
+          "ka->ka"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.06,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.032,
+            "vector_rank": 4,
+            "keyword_rank": 1,
+            "matched_query": "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?"
+          }
+        ]
+      },
+      {
+        "id": "m17",
+        "question": "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?",
+        "variants": [
+          "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?"
+        ],
+        "tags": [
+          "ka",
+          "ka->ka"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.17,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0323,
+            "vector_rank": 3,
+            "keyword_rank": 1,
+            "matched_query": "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0318,
+            "vector_rank": 4,
+            "keyword_rank": 2,
+            "matched_query": "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?"
+          }
+        ]
+      }
+    ]
+  }
+}

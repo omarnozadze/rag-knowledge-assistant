@@ -1,0 +1,14 @@
+{"id": "h01", "question": "Is there a per diem for domestic business trips?", "expected": [{"source": "finance-expenses.md", "evidence": "60 GEL per day within Georgia"}], "tags": ["semantic"]}
+{"id": "h02", "question": "Who approves leave requests longer than two weeks?", "expected": [{"source": "hr-leave-policy.md", "evidence": "additional approval from the department head"}], "tags": ["semantic"]}
+{"id": "h03", "question": "Can I install Spotify on my work laptop?", "expected": [{"source": "it-security-policy.md", "evidence": "company software catalog"}], "tags": ["semantic"]}
+{"id": "h04", "question": "Which roles are not eligible for remote work?", "expected": [{"source": "hr-remote-work.md", "evidence": "Warehouse, delivery and front-desk roles are not eligible"}], "tags": ["keyword"]}
+{"id": "h05", "question": "What happens when a return is refused?", "expected": [{"source": "returns-procedure.md", "evidence": "The customer is informed of the reason in writing"}], "tags": ["keyword"]}
+{"id": "h06", "question": "KTL-2210 seal requirement", "expected": [{"source": "returns-procedure.md", "evidence": "KTL-2210 — Electric kettle 1.7 L"}], "tags": ["identifier"]}
+{"id": "h07", "question": "Do I have to give back my laptop when I quit?", "expected": [{"source": "hr-remote-work.md", "evidence": "returned within 5 working days after employment ends"}], "tags": ["semantic"]}
+{"id": "h08", "question": "Can I buy groceries with my corporate card?", "expected": [{"source": "finance-expenses.md", "evidence": "used only for business expenses"}], "tags": ["semantic"]}
+{"id": "h09", "question": "რა ხდება, თუ ნაშთის სხვაობა დიდია?", "expected": [{"source": "warehouse-instructions-ka.md", "evidence": "2%-ს აღემატება"}], "tags": ["ka"]}
+{"id": "h10", "question": "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?", "expected": [{"source": "warehouse-instructions-ka.md", "evidence": "მხოლოდ სერტიფიცირებულ თანამშრომელს"}], "tags": ["ka"]}
+{"id": "h11", "question": "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?", "expected": [{"source": "onboarding-ka.md", "evidence": "ინფორმაციული უსაფრთხოების ტრენინგი"}], "tags": ["ka"]}
+{"id": "h12", "question": "Can confidential documents be shared with people outside the company?", "expected": [{"source": "it-security-policy.md", "evidence": "only be shared outside the company with encryption"}], "tags": ["keyword"]}
+{"id": "h13", "question": "What does it cost to return the standing desk?", "expected": [{"source": "returns-procedure.md", "evidence": "40 GEL pickup fee"}], "tags": ["semantic"]}
+{"id": "h14", "question": "Is MFA required for the VPN?", "expected": [{"source": "it-security-policy.md", "evidence": "mandatory for email, the ERP system, the HR portal and the VPN"}], "tags": ["keyword"]}

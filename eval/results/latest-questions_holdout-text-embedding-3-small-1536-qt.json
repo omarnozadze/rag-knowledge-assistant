@@ -1,0 +1,1695 @@
+{
+  "timestamp": "2026-10-27T15:43:18",
+  "question_set": "questions_holdout",
+  "embeddings": "openai",
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dim": 1536,
+  "config": "text-embedding-3-small-1536-qt",
+  "query_translation": true,
+  "translation_model": "gpt-5.5",
+  "k": 5,
+  "documents": 7,
+  "questions": 14,
+  "overall": {
+    "vector": {
+      "n": 14,
+      "hit@1": 0.7142857142857143,
+      "hit@3": 0.8571428571428571,
+      "hit@5": 0.9285714285714286,
+      "mrr": 0.7916666666666667,
+      "doc_hit@1": 0.8571428571428571,
+      "latency_p50_ms": 2.005,
+      "latency_p95_ms": 47.91
+    },
+    "hybrid": {
+      "n": 14,
+      "hit@1": 0.8571428571428571,
+      "hit@3": 0.9285714285714286,
+      "hit@5": 0.9285714285714286,
+      "mrr": 0.8928571428571429,
+      "doc_hit@1": 0.8571428571428571,
+      "latency_p50_ms": 1.2650000000000001,
+      "latency_p95_ms": 1.46
+    }
+  },
+  "by_tag": {
+    "vector": {
+      "identifier": {
+        "n": 1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "doc_hit@1": 1.0,
+        "latency_p50_ms": 2.6,
+        "latency_p95_ms": 2.6
+      },
+      "ka": {
+        "n": 3,
+        "hit@1": 0.6666666666666666,
+        "hit@3": 0.6666666666666666,
+        "hit@5": 1.0,
+        "mrr": 0.75,
+        "doc_hit@1": 1.0,
+        "latency_p50_ms": 1.44,
+        "latency_p95_ms": 1.55
+      },
+      "keyword": {
+        "n": 4,
+        "hit@1": 0.75,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.875,
+        "doc_hit@1": 1.0,
+        "latency_p50_ms": 23.02,
+        "latency_p95_ms": 45.66
+      },
+      "semantic": {
+        "n": 6,
+        "hit@1": 0.6666666666666666,
+        "hit@3": 0.8333333333333334,
+        "hit@5": 0.8333333333333334,
+        "mrr": 0.7222222222222222,
+        "doc_hit@1": 0.6666666666666666,
+        "latency_p50_ms": 24.98,
+        "latency_p95_ms": 49.39
+      }
+    },
+    "hybrid": {
+      "identifier": {
+        "n": 1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "doc_hit@1": 1.0,
+        "latency_p50_ms": 1.24,
+        "latency_p95_ms": 1.24
+      },
+      "ka": {
+        "n": 3,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "doc_hit@1": 1.0,
+        "latency_p50_ms": 1.24,
+        "latency_p95_ms": 1.39
+      },
+      "keyword": {
+        "n": 4,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "doc_hit@1": 1.0,
+        "latency_p50_ms": 1.22,
+        "latency_p95_ms": 1.46
+      },
+      "semantic": {
+        "n": 6,
+        "hit@1": 0.6666666666666666,
+        "hit@3": 0.8333333333333334,
+        "hit@5": 0.8333333333333334,
+        "mrr": 0.75,
+        "doc_hit@1": 0.6666666666666666,
+        "latency_p50_ms": 1.31,
+        "latency_p95_ms": 1.49
+      }
+    }
+  },
+  "per_question": {
+    "vector": [
+      {
+        "id": "h01",
+        "question": "Is there a per diem for domestic business trips?",
+        "variants": [
+          "Is there a per diem for domestic business trips?",
+          "გათვალისწინებულია თუ არა დღიური ანაზღაურება ქვეყნის შიგნით სამსახურებრივი მივლინებისთვის?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 49.39,
+        "retrieved": [
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Is there a per diem for domestic business trips?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Is there a per diem for domestic business trips?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Is there a per diem for domestic business trips?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Is there a per diem for domestic business trips?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Is there a per diem for domestic business trips?"
+          }
+        ]
+      },
+      {
+        "id": "h02",
+        "question": "Who approves leave requests longer than two weeks?",
+        "variants": [
+          "Who approves leave requests longer than two weeks?",
+          "ვინ ამტკიცებს ორ კვირაზე ხანგრძლივ შვებულების მოთხოვნებს?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 47.5,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Who approves leave requests longer than two weeks?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Who approves leave requests longer than two weeks?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Who approves leave requests longer than two weeks?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Who approves leave requests longer than two weeks?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Who approves leave requests longer than two weeks?"
+          }
+        ]
+      },
+      {
+        "id": "h03",
+        "question": "Can I install Spotify on my work laptop?",
+        "variants": [
+          "Can I install Spotify on my work laptop?",
+          "შემიძლია თუ არა Spotify-ის დაყენება ჩემს სამუშაო ლეპტოპზე?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 3,
+        "doc_rank": 3,
+        "latency_ms": 47.91,
+        "retrieved": [
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Can I install Spotify on my work laptop?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Can I install Spotify on my work laptop?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Can I install Spotify on my work laptop?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Can I install Spotify on my work laptop?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Can I install Spotify on my work laptop?"
+          }
+        ]
+      },
+      {
+        "id": "h04",
+        "question": "Which roles are not eligible for remote work?",
+        "variants": [
+          "Which roles are not eligible for remote work?",
+          "რომელი პოზიციები არ ექვემდებარება დისტანციურ მუშაობას?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 45.66,
+        "retrieved": [
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Which roles are not eligible for remote work?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Which roles are not eligible for remote work?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Which roles are not eligible for remote work?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Which roles are not eligible for remote work?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Which roles are not eligible for remote work?"
+          }
+        ]
+      },
+      {
+        "id": "h05",
+        "question": "What happens when a return is refused?",
+        "variants": [
+          "What happens when a return is refused?",
+          "რა ხდება, როდესაც დაბრუნების მოთხოვნა უარყოფილია?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 1,
+        "latency_ms": 44.67,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "What happens when a return is refused?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "What happens when a return is refused?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "What happens when a return is refused?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "What happens when a return is refused?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "What happens when a return is refused?"
+          }
+        ]
+      },
+      {
+        "id": "h06",
+        "question": "KTL-2210 seal requirement",
+        "variants": [
+          "KTL-2210 seal requirement",
+          "KTL-2210 ლუქის მოთხოვნა"
+        ],
+        "tags": [
+          "identifier"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 2.6,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "KTL-2210 seal requirement"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "KTL-2210 seal requirement"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "KTL-2210 seal requirement"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "KTL-2210 seal requirement"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "KTL-2210 seal requirement"
+          }
+        ]
+      },
+      {
+        "id": "h07",
+        "question": "Do I have to give back my laptop when I quit?",
+        "variants": [
+          "Do I have to give back my laptop when I quit?",
+          "სამსახურიდან წასვლისას ვალდებული ვარ დავაბრუნო ჩემი ლეპტოპი?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 2.46,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Do I have to give back my laptop when I quit?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Do I have to give back my laptop when I quit?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Do I have to give back my laptop when I quit?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Do I have to give back my laptop when I quit?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Do I have to give back my laptop when I quit?"
+          }
+        ]
+      },
+      {
+        "id": "h08",
+        "question": "Can I buy groceries with my corporate card?",
+        "variants": [
+          "Can I buy groceries with my corporate card?",
+          "შემიძლია თუ არა კორპორატიული ბარათით სასურსათო პროდუქტების შეძენა?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.51,
+        "retrieved": [
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Can I buy groceries with my corporate card?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Can I buy groceries with my corporate card?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Can I buy groceries with my corporate card?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Can I buy groceries with my corporate card?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Can I buy groceries with my corporate card?"
+          }
+        ]
+      },
+      {
+        "id": "h09",
+        "question": "რა ხდება, თუ ნაშთის სხვაობა დიდია?",
+        "variants": [
+          "რა ხდება, თუ ნაშთის სხვაობა დიდია?",
+          "What happens if the balance discrepancy is large?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 4,
+        "doc_rank": 1,
+        "latency_ms": 1.33,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ ნაშთის სხვაობა დიდია?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ ნაშთის სხვაობა დიდია?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ ნაშთის სხვაობა დიდია?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ ნაშთის სხვაობა დიდია?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ ნაშთის სხვაობა დიდია?"
+          }
+        ]
+      },
+      {
+        "id": "h10",
+        "question": "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?",
+        "variants": [
+          "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?",
+          "Who is authorized to operate a forklift?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.44,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?"
+          }
+        ]
+      },
+      {
+        "id": "h11",
+        "question": "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?",
+        "variants": [
+          "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?",
+          "What training must a new employee complete?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.55,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?"
+          }
+        ]
+      },
+      {
+        "id": "h12",
+        "question": "Can confidential documents be shared with people outside the company?",
+        "variants": [
+          "Can confidential documents be shared with people outside the company?",
+          "შეიძლება თუ არა კონფიდენციალური დოკუმენტების გაზიარება კომპანიის გარეთ მყოფ პირებთან?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.37,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Can confidential documents be shared with people outside the company?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Can confidential documents be shared with people outside the company?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Can confidential documents be shared with people outside the company?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Can confidential documents be shared with people outside the company?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Can confidential documents be shared with people outside the company?"
+          }
+        ]
+      },
+      {
+        "id": "h13",
+        "question": "What does it cost to return the standing desk?",
+        "variants": [
+          "What does it cost to return the standing desk?",
+          "რა ჯდება დგომით სამუშაო მაგიდის დაბრუნება?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.96,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "What does it cost to return the standing desk?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "What does it cost to return the standing desk?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "What does it cost to return the standing desk?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "What does it cost to return the standing desk?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "What does it cost to return the standing desk?"
+          }
+        ]
+      },
+      {
+        "id": "h14",
+        "question": "Is MFA required for the VPN?",
+        "variants": [
+          "Is MFA required for the VPN?",
+          "სავალდებულოა თუ არა MFA VPN-ისთვის?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.91,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Is MFA required for the VPN?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Is MFA required for the VPN?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Is MFA required for the VPN?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Is MFA required for the VPN?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Is MFA required for the VPN?"
+          }
+        ]
+      }
+    ],
+    "hybrid": [
+      {
+        "id": "h01",
+        "question": "Is there a per diem for domestic business trips?",
+        "variants": [
+          "Is there a per diem for domestic business trips?",
+          "გათვალისწინებულია თუ არა დღიური ანაზღაურება ქვეყნის შიგნით სამსახურებრივი მივლინებისთვის?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.49,
+        "retrieved": [
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "Is there a per diem for domestic business trips?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0323,
+            "vector_rank": 2,
+            "keyword_rank": 2,
+            "matched_query": "Is there a per diem for domestic business trips?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0317,
+            "vector_rank": 3,
+            "keyword_rank": 3,
+            "matched_query": "Is there a per diem for domestic business trips?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Is there a per diem for domestic business trips?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Is there a per diem for domestic business trips?"
+          }
+        ]
+      },
+      {
+        "id": "h02",
+        "question": "Who approves leave requests longer than two weeks?",
+        "variants": [
+          "Who approves leave requests longer than two weeks?",
+          "ვინ ამტკიცებს ორ კვირაზე ხანგრძლივ შვებულების მოთხოვნებს?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.45,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "Who approves leave requests longer than two weeks?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0323,
+            "vector_rank": 2,
+            "keyword_rank": 2,
+            "matched_query": "Who approves leave requests longer than two weeks?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0317,
+            "vector_rank": 3,
+            "keyword_rank": 3,
+            "matched_query": "Who approves leave requests longer than two weeks?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Who approves leave requests longer than two weeks?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Who approves leave requests longer than two weeks?"
+          }
+        ]
+      },
+      {
+        "id": "h03",
+        "question": "Can I install Spotify on my work laptop?",
+        "variants": [
+          "Can I install Spotify on my work laptop?",
+          "შემიძლია თუ არა Spotify-ის დაყენება ჩემს სამუშაო ლეპტოპზე?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 2,
+        "latency_ms": 1.28,
+        "retrieved": [
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.032,
+            "vector_rank": 2,
+            "keyword_rank": 3,
+            "matched_query": "Can I install Spotify on my work laptop?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.032,
+            "vector_rank": 3,
+            "keyword_rank": 2,
+            "matched_query": "Can I install Spotify on my work laptop?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0305,
+            "vector_rank": 11,
+            "keyword_rank": 1,
+            "matched_query": "შემიძლია თუ არა Spotify-ის დაყენება ჩემს სამუშაო ლეპტოპზე?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Can I install Spotify on my work laptop?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Can I install Spotify on my work laptop?"
+          }
+        ]
+      },
+      {
+        "id": "h04",
+        "question": "Which roles are not eligible for remote work?",
+        "variants": [
+          "Which roles are not eligible for remote work?",
+          "რომელი პოზიციები არ ექვემდებარება დისტანციურ მუშაობას?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.23,
+        "retrieved": [
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "Which roles are not eligible for remote work?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0323,
+            "vector_rank": 2,
+            "keyword_rank": 2,
+            "matched_query": "Which roles are not eligible for remote work?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0315,
+            "vector_rank": 4,
+            "keyword_rank": 3,
+            "matched_query": "Which roles are not eligible for remote work?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Which roles are not eligible for remote work?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Which roles are not eligible for remote work?"
+          }
+        ]
+      },
+      {
+        "id": "h05",
+        "question": "What happens when a return is refused?",
+        "variants": [
+          "What happens when a return is refused?",
+          "რა ხდება, როდესაც დაბრუნების მოთხოვნა უარყოფილია?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.19,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0325,
+            "vector_rank": 2,
+            "keyword_rank": 1,
+            "matched_query": "What happens when a return is refused?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "What happens when a return is refused?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "What happens when a return is refused?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "What happens when a return is refused?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "What happens when a return is refused?"
+          }
+        ]
+      },
+      {
+        "id": "h06",
+        "question": "KTL-2210 seal requirement",
+        "variants": [
+          "KTL-2210 seal requirement",
+          "KTL-2210 ლუქის მოთხოვნა"
+        ],
+        "tags": [
+          "identifier"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.24,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "KTL-2210 seal requirement"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "KTL-2210 seal requirement"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "KTL-2210 seal requirement"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "KTL-2210 seal requirement"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "KTL-2210 seal requirement"
+          }
+        ]
+      },
+      {
+        "id": "h07",
+        "question": "Do I have to give back my laptop when I quit?",
+        "variants": [
+          "Do I have to give back my laptop when I quit?",
+          "სამსახურიდან წასვლისას ვალდებული ვარ დავაბრუნო ჩემი ლეპტოპი?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.28,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Do I have to give back my laptop when I quit?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Do I have to give back my laptop when I quit?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Do I have to give back my laptop when I quit?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Do I have to give back my laptop when I quit?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Do I have to give back my laptop when I quit?"
+          }
+        ]
+      },
+      {
+        "id": "h08",
+        "question": "Can I buy groceries with my corporate card?",
+        "variants": [
+          "Can I buy groceries with my corporate card?",
+          "შემიძლია თუ არა კორპორატიული ბარათით სასურსათო პროდუქტების შეძენა?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.25,
+        "retrieved": [
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0325,
+            "vector_rank": 1,
+            "keyword_rank": 2,
+            "matched_query": "Can I buy groceries with my corporate card?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0325,
+            "vector_rank": 2,
+            "keyword_rank": 1,
+            "matched_query": "Can I buy groceries with my corporate card?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Can I buy groceries with my corporate card?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Can I buy groceries with my corporate card?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Can I buy groceries with my corporate card?"
+          }
+        ]
+      },
+      {
+        "id": "h09",
+        "question": "რა ხდება, თუ ნაშთის სხვაობა დიდია?",
+        "variants": [
+          "რა ხდება, თუ ნაშთის სხვაობა დიდია?",
+          "What happens if the balance discrepancy is large?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.14,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.032,
+            "vector_rank": 4,
+            "keyword_rank": 1,
+            "matched_query": "რა ხდება, თუ ნაშთის სხვაობა დიდია?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ ნაშთის სხვაობა დიდია?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ ნაშთის სხვაობა დიდია?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ ნაშთის სხვაობა დიდია?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა ხდება, თუ ნაშთის სხვაობა დიდია?"
+          }
+        ]
+      },
+      {
+        "id": "h10",
+        "question": "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?",
+        "variants": [
+          "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?",
+          "Who is authorized to operate a forklift?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.39,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0323,
+            "vector_rank": 2,
+            "keyword_rank": 2,
+            "matched_query": "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "ვის შეუძლია ჩანგლიანი დამტვირთველის მართვა?"
+          }
+        ]
+      },
+      {
+        "id": "h11",
+        "question": "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?",
+        "variants": [
+          "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?",
+          "What training must a new employee complete?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.24,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0325,
+            "vector_rank": 1,
+            "keyword_rank": 2,
+            "matched_query": "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0323,
+            "vector_rank": 3,
+            "keyword_rank": 1,
+            "matched_query": "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0302,
+            "vector_rank": 10,
+            "keyword_rank": 3,
+            "matched_query": "What training must a new employee complete?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა ტრენინგები უნდა გაიაროს ახალმა თანამშრომელმა?"
+          }
+        ]
+      },
+      {
+        "id": "h12",
+        "question": "Can confidential documents be shared with people outside the company?",
+        "variants": [
+          "Can confidential documents be shared with people outside the company?",
+          "შეიძლება თუ არა კონფიდენციალური დოკუმენტების გაზიარება კომპანიის გარეთ მყოფ პირებთან?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.46,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "Can confidential documents be shared with people outside the company?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0323,
+            "vector_rank": 2,
+            "keyword_rank": 2,
+            "matched_query": "Can confidential documents be shared with people outside the company?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0315,
+            "vector_rank": 4,
+            "keyword_rank": 3,
+            "matched_query": "Can confidential documents be shared with people outside the company?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Can confidential documents be shared with people outside the company?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Can confidential documents be shared with people outside the company?"
+          }
+        ]
+      },
+      {
+        "id": "h13",
+        "question": "What does it cost to return the standing desk?",
+        "variants": [
+          "What does it cost to return the standing desk?",
+          "რა ჯდება დგომით სამუშაო მაგიდის დაბრუნება?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.34,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "What does it cost to return the standing desk?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0323,
+            "vector_rank": 2,
+            "keyword_rank": 2,
+            "matched_query": "What does it cost to return the standing desk?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0317,
+            "vector_rank": 3,
+            "keyword_rank": 3,
+            "matched_query": "What does it cost to return the standing desk?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0312,
+            "vector_rank": 4,
+            "keyword_rank": 4,
+            "matched_query": "What does it cost to return the standing desk?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "What does it cost to return the standing desk?"
+          }
+        ]
+      },
+      {
+        "id": "h14",
+        "question": "Is MFA required for the VPN?",
+        "variants": [
+          "Is MFA required for the VPN?",
+          "სავალდებულოა თუ არა MFA VPN-ისთვის?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.21,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "Is MFA required for the VPN?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Is MFA required for the VPN?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Is MFA required for the VPN?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Is MFA required for the VPN?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Is MFA required for the VPN?"
+          }
+        ]
+      }
+    ]
+  }
+}

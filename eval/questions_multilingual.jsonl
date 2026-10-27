@@ -1,0 +1,17 @@
+{"id": "m01", "question": "რამდენი დღით ადრე უნდა მოვითხოვო შვებულება?", "expected": [{"source": "hr-leave-policy.md", "evidence": "at least 5 working days before"}], "tags": ["ka", "cross-lingual", "ka->en"]}
+{"id": "m02", "question": "რამდენი ანაზღაურებადი ბიულეტენი მეკუთვნის წელიწადში?", "expected": [{"source": "hr-leave-policy.md", "evidence": "40 calendar days per year"}], "tags": ["ka", "cross-lingual", "ka->en"]}
+{"id": "m03", "question": "კვირაში რამდენი დღე შემიძლია სახლიდან ვიმუშაო?", "expected": [{"source": "hr-remote-work.md", "evidence": "up to 2 days per week"}], "tags": ["ka", "cross-lingual", "ka->en"]}
+{"id": "m04", "question": "რა თანხას ანაზღაურებს კომპანია სახლის ოფისის ავეჯისთვის?", "expected": [{"source": "hr-remote-work.md", "evidence": "300 GEL"}], "tags": ["ka", "cross-lingual", "ka->en"]}
+{"id": "m05", "question": "რამდენ დღეში უნდა დააბრუნოს კლიენტმა პროდუქტი?", "expected": [{"source": "returns-procedure.md", "evidence": "within 14 days of delivery"}], "tags": ["ka", "cross-lingual", "ka->en"]}
+{"id": "m06", "question": "რა სიგრძის უნდა იყოს პაროლი?", "expected": [{"source": "it-security-policy.md", "evidence": "at least 14 characters"}], "tags": ["ka", "cross-lingual", "ka->en"]}
+{"id": "m07", "question": "საზღვარგარეთ მივლინებისას რამდენი დღიური მეკუთვნის?", "expected": [{"source": "finance-expenses.md", "evidence": "50 EUR per day abroad"}], "tags": ["ka", "cross-lingual", "ka->en"]}
+{"id": "m08", "question": "ტაქსის ხარჯი როდის ანაზღაურდება?", "expected": [{"source": "finance-expenses.md", "evidence": "between 23:00 and 06:00"}], "tags": ["ka", "cross-lingual", "ka->en"]}
+{"id": "m09", "question": "საეჭვო ელფოსტა როგორ შევატყობინო?", "expected": [{"source": "it-security-policy.md", "evidence": "Report phishing"}], "tags": ["ka", "cross-lingual", "ka->en"]}
+{"id": "m10", "question": "When are supplier deliveries accepted at the warehouse?", "expected": [{"source": "warehouse-instructions-ka.md", "evidence": "09:00-დან 15:00-მდე"}], "tags": ["cross-lingual", "en->ka"]}
+{"id": "m11", "question": "Where should damaged goods be stored?", "expected": [{"source": "warehouse-instructions-ka.md", "evidence": "წითელი ეტიკეტით"}], "tags": ["cross-lingual", "en->ka"]}
+{"id": "m12", "question": "What time does a new employee arrive on the first day?", "expected": [{"source": "onboarding-ka.md", "evidence": "09:30-ზე"}], "tags": ["cross-lingual", "en->ka"]}
+{"id": "m13", "question": "How often does a new hire meet their mentor?", "expected": [{"source": "onboarding-ka.md", "evidence": "კვირაში ერთხელ ხვდებიან 30 წუთით"}], "tags": ["cross-lingual", "en->ka"]}
+{"id": "m14", "question": "რა ხდება, თუ მომწოდებლის ზედნადები შეკვეთას არ ემთხვევა?", "expected": [{"source": "warehouse-instructions-ka.md", "evidence": "შეუსაბამობის შემთხვევაში შედგება აქტი"}], "tags": ["ka", "ka->ka"]}
+{"id": "m15", "question": "რა წონის ტვირთს უნდა ეზიდებოდეს ორი ადამიანი?", "expected": [{"source": "warehouse-instructions-ka.md", "evidence": "25 კილოგრამზე მეტი"}], "tags": ["ka", "ka->ka"]}
+{"id": "m16", "question": "როდის არის საწყობი დაკეტილი საქონლის გაცემისთვის?", "expected": [{"source": "warehouse-instructions-ka.md", "evidence": "ამ დღეს საწყობი გასაცემად დახურულია"}], "tags": ["ka", "ka->ka"]}
+{"id": "m17", "question": "რა დოკუმენტებს აწერს ხელს ახალი თანამშრომელი პირველ დღეს?", "expected": [{"source": "onboarding-ka.md", "evidence": "შრომით ხელშეკრულებას"}], "tags": ["ka", "ka->ka"]}

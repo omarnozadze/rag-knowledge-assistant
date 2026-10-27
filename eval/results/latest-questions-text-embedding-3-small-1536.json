@@ -1,0 +1,4579 @@
+{
+  "timestamp": "2026-10-27T15:51:11",
+  "question_set": "questions",
+  "embeddings": "openai",
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dim": 1536,
+  "config": "text-embedding-3-small-1536",
+  "query_translation": false,
+  "translation_model": null,
+  "k": 5,
+  "documents": 7,
+  "questions": 40,
+  "overall": {
+    "vector": {
+      "n": 40,
+      "hit@1": 0.55,
+      "hit@3": 0.825,
+      "hit@5": 0.9,
+      "mrr": 0.6841666666666667,
+      "doc_hit@1": 0.725,
+      "latency_p50_ms": 0.95,
+      "latency_p95_ms": 46.75
+    },
+    "hybrid": {
+      "n": 40,
+      "hit@1": 0.675,
+      "hit@3": 0.875,
+      "hit@5": 0.9,
+      "mrr": 0.7729166666666667,
+      "doc_hit@1": 0.825,
+      "latency_p50_ms": 1.1,
+      "latency_p95_ms": 1.33
+    }
+  },
+  "by_tag": {
+    "vector": {
+      "cross-lingual": {
+        "n": 5,
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.2,
+        "mrr": 0.05,
+        "doc_hit@1": 0.0,
+        "latency_p50_ms": 0.88,
+        "latency_p95_ms": 0.93
+      },
+      "identifier": {
+        "n": 6,
+        "hit@1": 0.6666666666666666,
+        "hit@3": 0.8333333333333334,
+        "hit@5": 1.0,
+        "mrr": 0.7833333333333333,
+        "doc_hit@1": 0.8333333333333334,
+        "latency_p50_ms": 1.345,
+        "latency_p95_ms": 1.53
+      },
+      "ka": {
+        "n": 9,
+        "hit@1": 0.1111111111111111,
+        "hit@3": 0.6666666666666666,
+        "hit@5": 0.7777777777777778,
+        "mrr": 0.34259259259259256,
+        "doc_hit@1": 0.2222222222222222,
+        "latency_p50_ms": 0.94,
+        "latency_p95_ms": 1.53
+      },
+      "keyword": {
+        "n": 8,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "doc_hit@1": 1.0,
+        "latency_p50_ms": 0.91,
+        "latency_p95_ms": 46.75
+      },
+      "multi-source": {
+        "n": 1,
+        "hit@1": 0.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.5,
+        "doc_hit@1": 1.0,
+        "latency_p50_ms": 0.84,
+        "latency_p95_ms": 0.84
+      },
+      "semantic": {
+        "n": 17,
+        "hit@1": 0.5882352941176471,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.7745098039215685,
+        "doc_hit@1": 0.8823529411764706,
+        "latency_p50_ms": 1.07,
+        "latency_p95_ms": 46.76
+      }
+    },
+    "hybrid": {
+      "cross-lingual": {
+        "n": 5,
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.2,
+        "mrr": 0.05,
+        "doc_hit@1": 0.0,
+        "latency_p50_ms": 1.12,
+        "latency_p95_ms": 1.44
+      },
+      "identifier": {
+        "n": 6,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "doc_hit@1": 1.0,
+        "latency_p50_ms": 1.16,
+        "latency_p95_ms": 1.33
+      },
+      "ka": {
+        "n": 9,
+        "hit@1": 0.5555555555555556,
+        "hit@3": 0.7777777777777778,
+        "hit@5": 0.7777777777777778,
+        "mrr": 0.6481481481481481,
+        "doc_hit@1": 0.6666666666666666,
+        "latency_p50_ms": 1.1,
+        "latency_p95_ms": 1.16
+      },
+      "keyword": {
+        "n": 8,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "doc_hit@1": 1.0,
+        "latency_p50_ms": 1.04,
+        "latency_p95_ms": 1.35
+      },
+      "multi-source": {
+        "n": 1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "doc_hit@1": 1.0,
+        "latency_p50_ms": 1.22,
+        "latency_p95_ms": 1.22
+      },
+      "semantic": {
+        "n": 17,
+        "hit@1": 0.6470588235294118,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.8137254901960784,
+        "doc_hit@1": 0.9411764705882353,
+        "latency_p50_ms": 1.1,
+        "latency_p95_ms": 1.22
+      }
+    }
+  },
+  "per_question": {
+    "vector": [
+      {
+        "id": "q01",
+        "question": "How many paid vacation days do I get per year?",
+        "variants": [
+          "How many paid vacation days do I get per year?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 1,
+        "latency_ms": 46.76,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How many paid vacation days do I get per year?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How many paid vacation days do I get per year?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How many paid vacation days do I get per year?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How many paid vacation days do I get per year?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How many paid vacation days do I get per year?"
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "question": "How far in advance must I submit a leave request?",
+        "variants": [
+          "How far in advance must I submit a leave request?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 46.75,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How far in advance must I submit a leave request?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How far in advance must I submit a leave request?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How far in advance must I submit a leave request?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How far in advance must I submit a leave request?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How far in advance must I submit a leave request?"
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "question": "Can I move my unused holiday days into next year?",
+        "variants": [
+          "Can I move my unused holiday days into next year?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 1,
+        "latency_ms": 44.05,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Can I move my unused holiday days into next year?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Can I move my unused holiday days into next year?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Can I move my unused holiday days into next year?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Can I move my unused holiday days into next year?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Can I move my unused holiday days into next year?"
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "question": "When do carried-over vacation days expire?",
+        "variants": [
+          "When do carried-over vacation days expire?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 1,
+        "latency_ms": 42.47,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "When do carried-over vacation days expire?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "When do carried-over vacation days expire?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "When do carried-over vacation days expire?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "When do carried-over vacation days expire?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "When do carried-over vacation days expire?"
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "question": "I'm sick today, by what time do I have to tell my boss?",
+        "variants": [
+          "I'm sick today, by what time do I have to tell my boss?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 48.58,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "I'm sick today, by what time do I have to tell my boss?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "I'm sick today, by what time do I have to tell my boss?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "I'm sick today, by what time do I have to tell my boss?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "I'm sick today, by what time do I have to tell my boss?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "I'm sick today, by what time do I have to tell my boss?"
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "question": "When do I need a doctor's note for being ill?",
+        "variants": [
+          "When do I need a doctor's note for being ill?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 2.67,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "When do I need a doctor's note for being ill?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "When do I need a doctor's note for being ill?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "When do I need a doctor's note for being ill?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "When do I need a doctor's note for being ill?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "When do I need a doctor's note for being ill?"
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "question": "How long is paid parental leave?",
+        "variants": [
+          "How long is paid parental leave?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.48,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How long is paid parental leave?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How long is paid parental leave?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How long is paid parental leave?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How long is paid parental leave?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How long is paid parental leave?"
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "question": "How many days off do I get when I get married?",
+        "variants": [
+          "How many days off do I get when I get married?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.24,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How many days off do I get when I get married?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How many days off do I get when I get married?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How many days off do I get when I get married?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How many days off do I get when I get married?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How many days off do I get when I get married?"
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "question": "How many days a week can I work from home?",
+        "variants": [
+          "How many days a week can I work from home?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.2,
+        "retrieved": [
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How many days a week can I work from home?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How many days a week can I work from home?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How many days a week can I work from home?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How many days a week can I work from home?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How many days a week can I work from home?"
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "question": "What are the core hours for remote employees?",
+        "variants": [
+          "What are the core hours for remote employees?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.15,
+        "retrieved": [
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "What are the core hours for remote employees?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "What are the core hours for remote employees?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "What are the core hours for remote employees?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "What are the core hours for remote employees?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "What are the core hours for remote employees?"
+          }
+        ]
+      },
+      {
+        "id": "q11",
+        "question": "Will the company pay for a chair for my home office?",
+        "variants": [
+          "Will the company pay for a chair for my home office?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.16,
+        "retrieved": [
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for a chair for my home office?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for a chair for my home office?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for a chair for my home office?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for a chair for my home office?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for a chair for my home office?"
+          }
+        ]
+      },
+      {
+        "id": "q12",
+        "question": "Can I work remotely from another country?",
+        "variants": [
+          "Can I work remotely from another country?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.89,
+        "retrieved": [
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Can I work remotely from another country?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Can I work remotely from another country?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Can I work remotely from another country?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Can I work remotely from another country?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Can I work remotely from another country?"
+          }
+        ]
+      },
+      {
+        "id": "q13",
+        "question": "What is the return policy for ABC-10293?",
+        "variants": [
+          "What is the return policy for ABC-10293?"
+        ],
+        "tags": [
+          "identifier"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 1,
+        "latency_ms": 1.5,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "What is the return policy for ABC-10293?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "What is the return policy for ABC-10293?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "What is the return policy for ABC-10293?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "What is the return policy for ABC-10293?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "What is the return policy for ABC-10293?"
+          }
+        ]
+      },
+      {
+        "id": "q14",
+        "question": "Can a customer return product ABC-10294?",
+        "variants": [
+          "Can a customer return product ABC-10294?"
+        ],
+        "tags": [
+          "identifier"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.25,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Can a customer return product ABC-10294?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Can a customer return product ABC-10294?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Can a customer return product ABC-10294?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Can a customer return product ABC-10294?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Can a customer return product ABC-10294?"
+          }
+        ]
+      },
+      {
+        "id": "q15",
+        "question": "KTL-2211 return conditions",
+        "variants": [
+          "KTL-2211 return conditions"
+        ],
+        "tags": [
+          "identifier"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.44,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "KTL-2211 return conditions"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "KTL-2211 return conditions"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "KTL-2211 return conditions"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "KTL-2211 return conditions"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "KTL-2211 return conditions"
+          }
+        ]
+      },
+      {
+        "id": "q16",
+        "question": "Who pays for the pickup when DSK-7781 is returned?",
+        "variants": [
+          "Who pays for the pickup when DSK-7781 is returned?"
+        ],
+        "tags": [
+          "identifier"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.23,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Who pays for the pickup when DSK-7781 is returned?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Who pays for the pickup when DSK-7781 is returned?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Who pays for the pickup when DSK-7781 is returned?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Who pays for the pickup when DSK-7781 is returned?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Who pays for the pickup when DSK-7781 is returned?"
+          }
+        ]
+      },
+      {
+        "id": "q17",
+        "question": "How long does a customer have to send an item back?",
+        "variants": [
+          "How long does a customer have to send an item back?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.91,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How long does a customer have to send an item back?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How long does a customer have to send an item back?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How long does a customer have to send an item back?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How long does a customer have to send an item back?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How long does a customer have to send an item back?"
+          }
+        ]
+      },
+      {
+        "id": "q18",
+        "question": "How long until a customer gets their money back after a return?",
+        "variants": [
+          "How long until a customer gets their money back after a return?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.89,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How long until a customer gets their money back after a return?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How long until a customer gets their money back after a return?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How long until a customer gets their money back after a return?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How long until a customer gets their money back after a return?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How long until a customer gets their money back after a return?"
+          }
+        ]
+      },
+      {
+        "id": "q19",
+        "question": "What is the minimum password length?",
+        "variants": [
+          "What is the minimum password length?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.93,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "What is the minimum password length?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "What is the minimum password length?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "What is the minimum password length?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "What is the minimum password length?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "What is the minimum password length?"
+          }
+        ]
+      },
+      {
+        "id": "q20",
+        "question": "Are text message codes OK for two-step login?",
+        "variants": [
+          "Are text message codes OK for two-step login?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.89,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Are text message codes OK for two-step login?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Are text message codes OK for two-step login?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Are text message codes OK for two-step login?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Are text message codes OK for two-step login?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Are text message codes OK for two-step login?"
+          }
+        ]
+      },
+      {
+        "id": "q21",
+        "question": "I left my laptop in a taxi, what should I do?",
+        "variants": [
+          "I left my laptop in a taxi, what should I do?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 3,
+        "doc_rank": 1,
+        "latency_ms": 0.83,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "I left my laptop in a taxi, what should I do?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "I left my laptop in a taxi, what should I do?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "I left my laptop in a taxi, what should I do?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "I left my laptop in a taxi, what should I do?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "I left my laptop in a taxi, what should I do?"
+          }
+        ]
+      },
+      {
+        "id": "q22",
+        "question": "How do I report a suspicious email?",
+        "variants": [
+          "How do I report a suspicious email?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.81,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How do I report a suspicious email?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How do I report a suspicious email?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How do I report a suspicious email?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How do I report a suspicious email?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How do I report a suspicious email?"
+          }
+        ]
+      },
+      {
+        "id": "q23",
+        "question": "How much money do I get per day on a trip abroad?",
+        "variants": [
+          "How much money do I get per day on a trip abroad?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.81,
+        "retrieved": [
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How much money do I get per day on a trip abroad?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How much money do I get per day on a trip abroad?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How much money do I get per day on a trip abroad?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How much money do I get per day on a trip abroad?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How much money do I get per day on a trip abroad?"
+          }
+        ]
+      },
+      {
+        "id": "q24",
+        "question": "Which form do I use to claim expenses?",
+        "variants": [
+          "Which form do I use to claim expenses?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.89,
+        "retrieved": [
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Which form do I use to claim expenses?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Which form do I use to claim expenses?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Which form do I use to claim expenses?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Which form do I use to claim expenses?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Which form do I use to claim expenses?"
+          }
+        ]
+      },
+      {
+        "id": "q25",
+        "question": "FIN-207 submission deadline",
+        "variants": [
+          "FIN-207 submission deadline"
+        ],
+        "tags": [
+          "identifier"
+        ],
+        "hit_rank": 5,
+        "doc_rank": 5,
+        "latency_ms": 1.17,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "FIN-207 submission deadline"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "FIN-207 submission deadline"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "FIN-207 submission deadline"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "FIN-207 submission deadline"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "FIN-207 submission deadline"
+          }
+        ]
+      },
+      {
+        "id": "q26",
+        "question": "Will the company pay for drinks at the hotel bar?",
+        "variants": [
+          "Will the company pay for drinks at the hotel bar?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.84,
+        "retrieved": [
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for drinks at the hotel bar?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for drinks at the hotel bar?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for drinks at the hotel bar?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for drinks at the hotel bar?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for drinks at the hotel bar?"
+          }
+        ]
+      },
+      {
+        "id": "q27",
+        "question": "When is a taxi reimbursed?",
+        "variants": [
+          "When is a taxi reimbursed?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.84,
+        "retrieved": [
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "When is a taxi reimbursed?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "When is a taxi reimbursed?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "When is a taxi reimbursed?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "When is a taxi reimbursed?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "When is a taxi reimbursed?"
+          }
+        ]
+      },
+      {
+        "id": "q28",
+        "question": "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?",
+        "variants": [
+          "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 3,
+        "doc_rank": 2,
+        "latency_ms": 0.89,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?"
+          }
+        ]
+      },
+      {
+        "id": "q29",
+        "question": "WH-3381 რა ვადაში უნდა შეივსოს?",
+        "variants": [
+          "WH-3381 რა ვადაში უნდა შეივსოს?"
+        ],
+        "tags": [
+          "ka",
+          "identifier"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.53,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "WH-3381 რა ვადაში უნდა შეივსოს?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "WH-3381 რა ვადაში უნდა შეივსოს?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "WH-3381 რა ვადაში უნდა შეივსოს?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "WH-3381 რა ვადაში უნდა შეივსოს?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "WH-3381 რა ვადაში უნდა შეივსოს?"
+          }
+        ]
+      },
+      {
+        "id": "q30",
+        "question": "რამდენად ხშირად ტარდება ინვენტარიზაცია?",
+        "variants": [
+          "რამდენად ხშირად ტარდება ინვენტარიზაცია?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 3,
+        "doc_rank": 2,
+        "latency_ms": 0.98,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რამდენად ხშირად ტარდება ინვენტარიზაცია?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რამდენად ხშირად ტარდება ინვენტარიზაცია?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რამდენად ხშირად ტარდება ინვენტარიზაცია?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რამდენად ხშირად ტარდება ინვენტარიზაცია?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რამდენად ხშირად ტარდება ინვენტარიზაცია?"
+          }
+        ]
+      },
+      {
+        "id": "q31",
+        "question": "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?",
+        "variants": [
+          "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 4,
+        "doc_rank": 2,
+        "latency_ms": 0.96,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?"
+          }
+        ]
+      },
+      {
+        "id": "q32",
+        "question": "რა უნდა ეცვას თანამშრომელს საწყობში?",
+        "variants": [
+          "რა უნდა ეცვას თანამშრომელს საწყობში?"
+        ],
+        "tags": [
+          "ka",
+          "semantic"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 2,
+        "latency_ms": 1.07,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა უნდა ეცვას თანამშრომელს საწყობში?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რა უნდა ეცვას თანამშრომელს საწყობში?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა უნდა ეცვას თანამშრომელს საწყობში?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა უნდა ეცვას თანამშრომელს საწყობში?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა უნდა ეცვას თანამშრომელს საწყობში?"
+          }
+        ]
+      },
+      {
+        "id": "q33",
+        "question": "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?",
+        "variants": [
+          "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 3,
+        "doc_rank": 1,
+        "latency_ms": 0.94,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?"
+          }
+        ]
+      },
+      {
+        "id": "q34",
+        "question": "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?",
+        "variants": [
+          "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?"
+        ],
+        "tags": [
+          "ka",
+          "semantic"
+        ],
+        "hit_rank": 3,
+        "doc_rank": 2,
+        "latency_ms": 0.89,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?"
+          }
+        ]
+      },
+      {
+        "id": "q35",
+        "question": "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?",
+        "variants": [
+          "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 0.87,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?"
+          }
+        ]
+      },
+      {
+        "id": "q36",
+        "question": "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?",
+        "variants": [
+          "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 0.91,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?"
+          }
+        ]
+      },
+      {
+        "id": "q37",
+        "question": "What documents must a new employee bring on the first day?",
+        "variants": [
+          "What documents must a new employee bring on the first day?"
+        ],
+        "tags": [
+          "cross-lingual"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 0.93,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "What documents must a new employee bring on the first day?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "What documents must a new employee bring on the first day?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "What documents must a new employee bring on the first day?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "What documents must a new employee bring on the first day?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "What documents must a new employee bring on the first day?"
+          }
+        ]
+      },
+      {
+        "id": "q38",
+        "question": "How often is warehouse stocktaking done?",
+        "variants": [
+          "How often is warehouse stocktaking done?"
+        ],
+        "tags": [
+          "cross-lingual"
+        ],
+        "hit_rank": 4,
+        "doc_rank": 4,
+        "latency_ms": 0.88,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How often is warehouse stocktaking done?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How often is warehouse stocktaking done?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How often is warehouse stocktaking done?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How often is warehouse stocktaking done?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How often is warehouse stocktaking done?"
+          }
+        ]
+      },
+      {
+        "id": "q39",
+        "question": "How long does it take for a new hire to get ERP access?",
+        "variants": [
+          "How long does it take for a new hire to get ERP access?"
+        ],
+        "tags": [
+          "cross-lingual"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 0.88,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How long does it take for a new hire to get ERP access?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How long does it take for a new hire to get ERP access?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How long does it take for a new hire to get ERP access?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How long does it take for a new hire to get ERP access?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How long does it take for a new hire to get ERP access?"
+          }
+        ]
+      },
+      {
+        "id": "q40",
+        "question": "Can I take vacation during my probation period?",
+        "variants": [
+          "Can I take vacation during my probation period?"
+        ],
+        "tags": [
+          "semantic",
+          "multi-source"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 1,
+        "latency_ms": 0.84,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Can I take vacation during my probation period?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Can I take vacation during my probation period?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Can I take vacation during my probation period?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Can I take vacation during my probation period?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Can I take vacation during my probation period?"
+          }
+        ]
+      }
+    ],
+    "hybrid": [
+      {
+        "id": "q01",
+        "question": "How many paid vacation days do I get per year?",
+        "variants": [
+          "How many paid vacation days do I get per year?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 1,
+        "latency_ms": 1.11,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0325,
+            "vector_rank": 1,
+            "keyword_rank": 2,
+            "matched_query": "How many paid vacation days do I get per year?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0325,
+            "vector_rank": 2,
+            "keyword_rank": 1,
+            "matched_query": "How many paid vacation days do I get per year?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0312,
+            "vector_rank": 4,
+            "keyword_rank": 4,
+            "matched_query": "How many paid vacation days do I get per year?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.031,
+            "vector_rank": 3,
+            "keyword_rank": 6,
+            "matched_query": "How many paid vacation days do I get per year?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.031,
+            "vector_rank": 6,
+            "keyword_rank": 3,
+            "matched_query": "How many paid vacation days do I get per year?"
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "question": "How far in advance must I submit a leave request?",
+        "variants": [
+          "How far in advance must I submit a leave request?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.05,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "How far in advance must I submit a leave request?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0323,
+            "vector_rank": 2,
+            "keyword_rank": 2,
+            "matched_query": "How far in advance must I submit a leave request?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0317,
+            "vector_rank": 3,
+            "keyword_rank": 3,
+            "matched_query": "How far in advance must I submit a leave request?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.031,
+            "vector_rank": 5,
+            "keyword_rank": 4,
+            "matched_query": "How far in advance must I submit a leave request?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How far in advance must I submit a leave request?"
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "question": "Can I move my unused holiday days into next year?",
+        "variants": [
+          "Can I move my unused holiday days into next year?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.09,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0325,
+            "vector_rank": 2,
+            "keyword_rank": 1,
+            "matched_query": "Can I move my unused holiday days into next year?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.032,
+            "vector_rank": 1,
+            "keyword_rank": 4,
+            "matched_query": "Can I move my unused holiday days into next year?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0317,
+            "vector_rank": 3,
+            "keyword_rank": 3,
+            "matched_query": "Can I move my unused holiday days into next year?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0313,
+            "vector_rank": 6,
+            "keyword_rank": 2,
+            "matched_query": "Can I move my unused holiday days into next year?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Can I move my unused holiday days into next year?"
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "question": "When do carried-over vacation days expire?",
+        "variants": [
+          "When do carried-over vacation days expire?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 1,
+        "latency_ms": 1.07,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0325,
+            "vector_rank": 1,
+            "keyword_rank": 2,
+            "matched_query": "When do carried-over vacation days expire?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0325,
+            "vector_rank": 2,
+            "keyword_rank": 1,
+            "matched_query": "When do carried-over vacation days expire?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "When do carried-over vacation days expire?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "When do carried-over vacation days expire?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "When do carried-over vacation days expire?"
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "question": "I'm sick today, by what time do I have to tell my boss?",
+        "variants": [
+          "I'm sick today, by what time do I have to tell my boss?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.08,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "I'm sick today, by what time do I have to tell my boss?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "I'm sick today, by what time do I have to tell my boss?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "I'm sick today, by what time do I have to tell my boss?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "I'm sick today, by what time do I have to tell my boss?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "I'm sick today, by what time do I have to tell my boss?"
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "question": "When do I need a doctor's note for being ill?",
+        "variants": [
+          "When do I need a doctor's note for being ill?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.02,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "When do I need a doctor's note for being ill?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "When do I need a doctor's note for being ill?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "When do I need a doctor's note for being ill?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "When do I need a doctor's note for being ill?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "When do I need a doctor's note for being ill?"
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "question": "How long is paid parental leave?",
+        "variants": [
+          "How long is paid parental leave?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.01,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "How long is paid parental leave?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0323,
+            "vector_rank": 2,
+            "keyword_rank": 2,
+            "matched_query": "How long is paid parental leave?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How long is paid parental leave?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How long is paid parental leave?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How long is paid parental leave?"
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "question": "How many days off do I get when I get married?",
+        "variants": [
+          "How many days off do I get when I get married?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.07,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How many days off do I get when I get married?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How many days off do I get when I get married?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How many days off do I get when I get married?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How many days off do I get when I get married?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How many days off do I get when I get married?"
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "question": "How many days a week can I work from home?",
+        "variants": [
+          "How many days a week can I work from home?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.32,
+        "retrieved": [
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "How many days a week can I work from home?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0323,
+            "vector_rank": 2,
+            "keyword_rank": 2,
+            "matched_query": "How many days a week can I work from home?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How many days a week can I work from home?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How many days a week can I work from home?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How many days a week can I work from home?"
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "question": "What are the core hours for remote employees?",
+        "variants": [
+          "What are the core hours for remote employees?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.04,
+        "retrieved": [
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "What are the core hours for remote employees?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0315,
+            "vector_rank": 5,
+            "keyword_rank": 2,
+            "matched_query": "What are the core hours for remote employees?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.031,
+            "vector_rank": 6,
+            "keyword_rank": 3,
+            "matched_query": "What are the core hours for remote employees?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "What are the core hours for remote employees?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "What are the core hours for remote employees?"
+          }
+        ]
+      },
+      {
+        "id": "q11",
+        "question": "Will the company pay for a chair for my home office?",
+        "variants": [
+          "Will the company pay for a chair for my home office?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.13,
+        "retrieved": [
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "Will the company pay for a chair for my home office?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0313,
+            "vector_rank": 6,
+            "keyword_rank": 2,
+            "matched_query": "Will the company pay for a chair for my home office?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0313,
+            "vector_rank": 5,
+            "keyword_rank": 3,
+            "matched_query": "Will the company pay for a chair for my home office?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for a chair for my home office?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for a chair for my home office?"
+          }
+        ]
+      },
+      {
+        "id": "q12",
+        "question": "Can I work remotely from another country?",
+        "variants": [
+          "Can I work remotely from another country?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.13,
+        "retrieved": [
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0325,
+            "vector_rank": 1,
+            "keyword_rank": 2,
+            "matched_query": "Can I work remotely from another country?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0325,
+            "vector_rank": 2,
+            "keyword_rank": 1,
+            "matched_query": "Can I work remotely from another country?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0306,
+            "vector_rank": 8,
+            "keyword_rank": 3,
+            "matched_query": "Can I work remotely from another country?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Can I work remotely from another country?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Can I work remotely from another country?"
+          }
+        ]
+      },
+      {
+        "id": "q13",
+        "question": "What is the return policy for ABC-10293?",
+        "variants": [
+          "What is the return policy for ABC-10293?"
+        ],
+        "tags": [
+          "identifier"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.23,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0325,
+            "vector_rank": 2,
+            "keyword_rank": 1,
+            "matched_query": "What is the return policy for ABC-10293?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "What is the return policy for ABC-10293?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "What is the return policy for ABC-10293?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "What is the return policy for ABC-10293?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "What is the return policy for ABC-10293?"
+          }
+        ]
+      },
+      {
+        "id": "q14",
+        "question": "Can a customer return product ABC-10294?",
+        "variants": [
+          "Can a customer return product ABC-10294?"
+        ],
+        "tags": [
+          "identifier"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.14,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0325,
+            "vector_rank": 1,
+            "keyword_rank": 2,
+            "matched_query": "Can a customer return product ABC-10294?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0325,
+            "vector_rank": 2,
+            "keyword_rank": 1,
+            "matched_query": "Can a customer return product ABC-10294?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Can a customer return product ABC-10294?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Can a customer return product ABC-10294?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Can a customer return product ABC-10294?"
+          }
+        ]
+      },
+      {
+        "id": "q15",
+        "question": "KTL-2211 return conditions",
+        "variants": [
+          "KTL-2211 return conditions"
+        ],
+        "tags": [
+          "identifier"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.18,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "KTL-2211 return conditions"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "KTL-2211 return conditions"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "KTL-2211 return conditions"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "KTL-2211 return conditions"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "KTL-2211 return conditions"
+          }
+        ]
+      },
+      {
+        "id": "q16",
+        "question": "Who pays for the pickup when DSK-7781 is returned?",
+        "variants": [
+          "Who pays for the pickup when DSK-7781 is returned?"
+        ],
+        "tags": [
+          "identifier"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.1,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "Who pays for the pickup when DSK-7781 is returned?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Who pays for the pickup when DSK-7781 is returned?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Who pays for the pickup when DSK-7781 is returned?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Who pays for the pickup when DSK-7781 is returned?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Who pays for the pickup when DSK-7781 is returned?"
+          }
+        ]
+      },
+      {
+        "id": "q17",
+        "question": "How long does a customer have to send an item back?",
+        "variants": [
+          "How long does a customer have to send an item back?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 1,
+        "latency_ms": 1.08,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0325,
+            "vector_rank": 2,
+            "keyword_rank": 1,
+            "matched_query": "How long does a customer have to send an item back?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How long does a customer have to send an item back?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How long does a customer have to send an item back?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How long does a customer have to send an item back?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How long does a customer have to send an item back?"
+          }
+        ]
+      },
+      {
+        "id": "q18",
+        "question": "How long until a customer gets their money back after a return?",
+        "variants": [
+          "How long until a customer gets their money back after a return?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 1,
+        "latency_ms": 1.2,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0325,
+            "vector_rank": 2,
+            "keyword_rank": 1,
+            "matched_query": "How long until a customer gets their money back after a return?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0323,
+            "vector_rank": 1,
+            "keyword_rank": 3,
+            "matched_query": "How long until a customer gets their money back after a return?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0304,
+            "vector_rank": 10,
+            "keyword_rank": 2,
+            "matched_query": "How long until a customer gets their money back after a return?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How long until a customer gets their money back after a return?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How long until a customer gets their money back after a return?"
+          }
+        ]
+      },
+      {
+        "id": "q19",
+        "question": "What is the minimum password length?",
+        "variants": [
+          "What is the minimum password length?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.94,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "What is the minimum password length?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "What is the minimum password length?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "What is the minimum password length?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "What is the minimum password length?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "What is the minimum password length?"
+          }
+        ]
+      },
+      {
+        "id": "q20",
+        "question": "Are text message codes OK for two-step login?",
+        "variants": [
+          "Are text message codes OK for two-step login?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.18,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "Are text message codes OK for two-step login?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0318,
+            "vector_rank": 4,
+            "keyword_rank": 2,
+            "matched_query": "Are text message codes OK for two-step login?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Are text message codes OK for two-step login?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Are text message codes OK for two-step login?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Are text message codes OK for two-step login?"
+          }
+        ]
+      },
+      {
+        "id": "q21",
+        "question": "I left my laptop in a taxi, what should I do?",
+        "variants": [
+          "I left my laptop in a taxi, what should I do?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 3,
+        "doc_rank": 1,
+        "latency_ms": 0.97,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "I left my laptop in a taxi, what should I do?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "I left my laptop in a taxi, what should I do?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "I left my laptop in a taxi, what should I do?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "I left my laptop in a taxi, what should I do?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "I left my laptop in a taxi, what should I do?"
+          }
+        ]
+      },
+      {
+        "id": "q22",
+        "question": "How do I report a suspicious email?",
+        "variants": [
+          "How do I report a suspicious email?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.0,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "How do I report a suspicious email?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How do I report a suspicious email?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How do I report a suspicious email?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How do I report a suspicious email?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How do I report a suspicious email?"
+          }
+        ]
+      },
+      {
+        "id": "q23",
+        "question": "How much money do I get per day on a trip abroad?",
+        "variants": [
+          "How much money do I get per day on a trip abroad?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.11,
+        "retrieved": [
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "How much money do I get per day on a trip abroad?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0323,
+            "vector_rank": 2,
+            "keyword_rank": 2,
+            "matched_query": "How much money do I get per day on a trip abroad?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0313,
+            "vector_rank": 5,
+            "keyword_rank": 3,
+            "matched_query": "How much money do I get per day on a trip abroad?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How much money do I get per day on a trip abroad?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How much money do I get per day on a trip abroad?"
+          }
+        ]
+      },
+      {
+        "id": "q24",
+        "question": "Which form do I use to claim expenses?",
+        "variants": [
+          "Which form do I use to claim expenses?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.35,
+        "retrieved": [
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "Which form do I use to claim expenses?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0308,
+            "vector_rank": 8,
+            "keyword_rank": 2,
+            "matched_query": "Which form do I use to claim expenses?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Which form do I use to claim expenses?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Which form do I use to claim expenses?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Which form do I use to claim expenses?"
+          }
+        ]
+      },
+      {
+        "id": "q25",
+        "question": "FIN-207 submission deadline",
+        "variants": [
+          "FIN-207 submission deadline"
+        ],
+        "tags": [
+          "identifier"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.33,
+        "retrieved": [
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0318,
+            "vector_rank": 5,
+            "keyword_rank": 1,
+            "matched_query": "FIN-207 submission deadline"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "FIN-207 submission deadline"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "FIN-207 submission deadline"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "FIN-207 submission deadline"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "FIN-207 submission deadline"
+          }
+        ]
+      },
+      {
+        "id": "q26",
+        "question": "Will the company pay for drinks at the hotel bar?",
+        "variants": [
+          "Will the company pay for drinks at the hotel bar?"
+        ],
+        "tags": [
+          "semantic"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 2,
+        "latency_ms": 1.1,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0313,
+            "vector_rank": 7,
+            "keyword_rank": 1,
+            "matched_query": "Will the company pay for drinks at the hotel bar?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for drinks at the hotel bar?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for drinks at the hotel bar?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for drinks at the hotel bar?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Will the company pay for drinks at the hotel bar?"
+          }
+        ]
+      },
+      {
+        "id": "q27",
+        "question": "When is a taxi reimbursed?",
+        "variants": [
+          "When is a taxi reimbursed?"
+        ],
+        "tags": [
+          "keyword"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.04,
+        "retrieved": [
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 1,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "When is a taxi reimbursed?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "When is a taxi reimbursed?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "When is a taxi reimbursed?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "When is a taxi reimbursed?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "When is a taxi reimbursed?"
+          }
+        ]
+      },
+      {
+        "id": "q28",
+        "question": "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?",
+        "variants": [
+          "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.16,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0323,
+            "vector_rank": 3,
+            "keyword_rank": 1,
+            "matched_query": "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?"
+          }
+        ]
+      },
+      {
+        "id": "q29",
+        "question": "WH-3381 რა ვადაში უნდა შეივსოს?",
+        "variants": [
+          "WH-3381 რა ვადაში უნდა შეივსოს?"
+        ],
+        "tags": [
+          "ka",
+          "identifier"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 0.97,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "WH-3381 რა ვადაში უნდა შეივსოს?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "WH-3381 რა ვადაში უნდა შეივსოს?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "WH-3381 რა ვადაში უნდა შეივსოს?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "WH-3381 რა ვადაში უნდა შეივსოს?"
+          },
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "WH-3381 რა ვადაში უნდა შეივსოს?"
+          }
+        ]
+      },
+      {
+        "id": "q30",
+        "question": "რამდენად ხშირად ტარდება ინვენტარიზაცია?",
+        "variants": [
+          "რამდენად ხშირად ტარდება ინვენტარიზაცია?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.02,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0323,
+            "vector_rank": 3,
+            "keyword_rank": 1,
+            "matched_query": "რამდენად ხშირად ტარდება ინვენტარიზაცია?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რამდენად ხშირად ტარდება ინვენტარიზაცია?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რამდენად ხშირად ტარდება ინვენტარიზაცია?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რამდენად ხშირად ტარდება ინვენტარიზაცია?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რამდენად ხშირად ტარდება ინვენტარიზაცია?"
+          }
+        ]
+      },
+      {
+        "id": "q31",
+        "question": "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?",
+        "variants": [
+          "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 2,
+        "doc_rank": 2,
+        "latency_ms": 1.16,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0323,
+            "vector_rank": 3,
+            "keyword_rank": 1,
+            "matched_query": "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0318,
+            "vector_rank": 4,
+            "keyword_rank": 2,
+            "matched_query": "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?"
+          }
+        ]
+      },
+      {
+        "id": "q32",
+        "question": "რა უნდა ეცვას თანამშრომელს საწყობში?",
+        "variants": [
+          "რა უნდა ეცვას თანამშრომელს საწყობში?"
+        ],
+        "tags": [
+          "ka",
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.0,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0325,
+            "vector_rank": 2,
+            "keyword_rank": 1,
+            "matched_query": "რა უნდა ეცვას თანამშრომელს საწყობში?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რა უნდა ეცვას თანამშრომელს საწყობში?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რა უნდა ეცვას თანამშრომელს საწყობში?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რა უნდა ეცვას თანამშრომელს საწყობში?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რა უნდა ეცვას თანამშრომელს საწყობში?"
+          }
+        ]
+      },
+      {
+        "id": "q33",
+        "question": "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?",
+        "variants": [
+          "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?"
+        ],
+        "tags": [
+          "ka"
+        ],
+        "hit_rank": 3,
+        "doc_rank": 1,
+        "latency_ms": 1.12,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?"
+          }
+        ]
+      },
+      {
+        "id": "q34",
+        "question": "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?",
+        "variants": [
+          "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?"
+        ],
+        "tags": [
+          "ka",
+          "semantic"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.1,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0323,
+            "vector_rank": 3,
+            "keyword_rank": 1,
+            "matched_query": "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?"
+          }
+        ]
+      },
+      {
+        "id": "q35",
+        "question": "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?",
+        "variants": [
+          "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.08,
+        "retrieved": [
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?"
+          }
+        ]
+      },
+      {
+        "id": "q36",
+        "question": "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?",
+        "variants": [
+          "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?"
+        ],
+        "tags": [
+          "ka",
+          "cross-lingual"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.12,
+        "retrieved": [
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?"
+          }
+        ]
+      },
+      {
+        "id": "q37",
+        "question": "What documents must a new employee bring on the first day?",
+        "variants": [
+          "What documents must a new employee bring on the first day?"
+        ],
+        "tags": [
+          "cross-lingual"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.13,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0328,
+            "vector_rank": 1,
+            "keyword_rank": 1,
+            "matched_query": "What documents must a new employee bring on the first day?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0323,
+            "vector_rank": 2,
+            "keyword_rank": 2,
+            "matched_query": "What documents must a new employee bring on the first day?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "What documents must a new employee bring on the first day?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "What documents must a new employee bring on the first day?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "What documents must a new employee bring on the first day?"
+          }
+        ]
+      },
+      {
+        "id": "q38",
+        "question": "How often is warehouse stocktaking done?",
+        "variants": [
+          "How often is warehouse stocktaking done?"
+        ],
+        "tags": [
+          "cross-lingual"
+        ],
+        "hit_rank": 4,
+        "doc_rank": 4,
+        "latency_ms": 1.03,
+        "retrieved": [
+          {
+            "filename": "returns-procedure.md",
+            "chunk_index": 0,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "How often is warehouse stocktaking done?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How often is warehouse stocktaking done?"
+          },
+          {
+            "filename": "onboarding-ka.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How often is warehouse stocktaking done?"
+          },
+          {
+            "filename": "warehouse-instructions-ka.md",
+            "chunk_index": 0,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "How often is warehouse stocktaking done?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "How often is warehouse stocktaking done?"
+          }
+        ]
+      },
+      {
+        "id": "q39",
+        "question": "How long does it take for a new hire to get ERP access?",
+        "variants": [
+          "How long does it take for a new hire to get ERP access?"
+        ],
+        "tags": [
+          "cross-lingual"
+        ],
+        "hit_rank": null,
+        "doc_rank": null,
+        "latency_ms": 1.44,
+        "retrieved": [
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 0,
+            "score": 0.0323,
+            "vector_rank": 1,
+            "keyword_rank": 3,
+            "matched_query": "How long does it take for a new hire to get ERP access?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0318,
+            "vector_rank": 5,
+            "keyword_rank": 1,
+            "matched_query": "How long does it take for a new hire to get ERP access?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0318,
+            "vector_rank": 4,
+            "keyword_rank": 2,
+            "matched_query": "How long does it take for a new hire to get ERP access?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0161,
+            "vector_rank": 2,
+            "keyword_rank": null,
+            "matched_query": "How long does it take for a new hire to get ERP access?"
+          },
+          {
+            "filename": "it-security-policy.md",
+            "chunk_index": 1,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "How long does it take for a new hire to get ERP access?"
+          }
+        ]
+      },
+      {
+        "id": "q40",
+        "question": "Can I take vacation during my probation period?",
+        "variants": [
+          "Can I take vacation during my probation period?"
+        ],
+        "tags": [
+          "semantic",
+          "multi-source"
+        ],
+        "hit_rank": 1,
+        "doc_rank": 1,
+        "latency_ms": 1.22,
+        "retrieved": [
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 0,
+            "score": 0.0325,
+            "vector_rank": 2,
+            "keyword_rank": 1,
+            "matched_query": "Can I take vacation during my probation period?"
+          },
+          {
+            "filename": "hr-leave-policy.md",
+            "chunk_index": 1,
+            "score": 0.0164,
+            "vector_rank": 1,
+            "keyword_rank": null,
+            "matched_query": "Can I take vacation during my probation period?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 0,
+            "score": 0.0159,
+            "vector_rank": 3,
+            "keyword_rank": null,
+            "matched_query": "Can I take vacation during my probation period?"
+          },
+          {
+            "filename": "hr-remote-work.md",
+            "chunk_index": 1,
+            "score": 0.0156,
+            "vector_rank": 4,
+            "keyword_rank": null,
+            "matched_query": "Can I take vacation during my probation period?"
+          },
+          {
+            "filename": "finance-expenses.md",
+            "chunk_index": 0,
+            "score": 0.0154,
+            "vector_rank": 5,
+            "keyword_rank": null,
+            "matched_query": "Can I take vacation during my probation period?"
+          }
+        ]
+      }
+    ]
+  }
+}

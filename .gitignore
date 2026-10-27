@@ -1,0 +1,16 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/rag.db
+eval/.cache/
+# Keep only the latest-* and baseline-* eval reports; per-run copies are local history
+eval/results/20*.json
+# Reports from before results were named per embedding config
+eval/results/latest-openai.json
+eval/results/latest-fake.json
+eval/results/latest-questions_holdout-openai.json
+data/uploads/*
+!data/uploads/.gitkeep

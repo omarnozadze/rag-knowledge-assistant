@@ -1,0 +1,40 @@
+{"id": "q01", "question": "How many paid vacation days do I get per year?", "expected": [{"source": "hr-leave-policy.md", "evidence": "24 working days"}], "tags": ["semantic"]}
+{"id": "q02", "question": "How far in advance must I submit a leave request?", "expected": [{"source": "hr-leave-policy.md", "evidence": "at least 5 working days before"}], "tags": ["keyword"]}
+{"id": "q03", "question": "Can I move my unused holiday days into next year?", "expected": [{"source": "hr-leave-policy.md", "evidence": "Up to 5 unused annual leave days"}], "tags": ["semantic"]}
+{"id": "q04", "question": "When do carried-over vacation days expire?", "expected": [{"source": "hr-leave-policy.md", "evidence": "before 31 March"}], "tags": ["semantic"]}
+{"id": "q05", "question": "I'm sick today, by what time do I have to tell my boss?", "expected": [{"source": "hr-leave-policy.md", "evidence": "before 10:00 on the first day"}], "tags": ["semantic"]}
+{"id": "q06", "question": "When do I need a doctor's note for being ill?", "expected": [{"source": "hr-leave-policy.md", "evidence": "longer than 3 consecutive days"}], "tags": ["semantic"]}
+{"id": "q07", "question": "How long is paid parental leave?", "expected": [{"source": "hr-leave-policy.md", "evidence": "183 calendar days"}], "tags": ["keyword"]}
+{"id": "q08", "question": "How many days off do I get when I get married?", "expected": [{"source": "hr-leave-policy.md", "evidence": "own wedding"}], "tags": ["semantic"]}
+{"id": "q09", "question": "How many days a week can I work from home?", "expected": [{"source": "hr-remote-work.md", "evidence": "up to 2 days per week"}], "tags": ["semantic"]}
+{"id": "q10", "question": "What are the core hours for remote employees?", "expected": [{"source": "hr-remote-work.md", "evidence": "10:00 to 16:00"}], "tags": ["keyword"]}
+{"id": "q11", "question": "Will the company pay for a chair for my home office?", "expected": [{"source": "hr-remote-work.md", "evidence": "300 GEL"}], "tags": ["semantic"]}
+{"id": "q12", "question": "Can I work remotely from another country?", "expected": [{"source": "hr-remote-work.md", "evidence": "at most 20 working days per year"}], "tags": ["keyword"]}
+{"id": "q13", "question": "What is the return policy for ABC-10293?", "expected": [{"source": "returns-procedure.md", "evidence": "ABC-10293 — Wireless headphones"}], "tags": ["identifier"]}
+{"id": "q14", "question": "Can a customer return product ABC-10294?", "expected": [{"source": "returns-procedure.md", "evidence": "ABC-10294 — Custom engraved headphones"}], "tags": ["identifier"]}
+{"id": "q15", "question": "KTL-2211 return conditions", "expected": [{"source": "returns-procedure.md", "evidence": "KTL-2211 — Electric kettle 1.0 L"}], "tags": ["identifier"]}
+{"id": "q16", "question": "Who pays for the pickup when DSK-7781 is returned?", "expected": [{"source": "returns-procedure.md", "evidence": "40 GEL pickup fee"}], "tags": ["identifier"]}
+{"id": "q17", "question": "How long does a customer have to send an item back?", "expected": [{"source": "returns-procedure.md", "evidence": "within 14 days of delivery"}], "tags": ["semantic"]}
+{"id": "q18", "question": "How long until a customer gets their money back after a return?", "expected": [{"source": "returns-procedure.md", "evidence": "within 5 working days after the warehouse confirms"}], "tags": ["semantic"]}
+{"id": "q19", "question": "What is the minimum password length?", "expected": [{"source": "it-security-policy.md", "evidence": "at least 14 characters"}], "tags": ["keyword"]}
+{"id": "q20", "question": "Are text message codes OK for two-step login?", "expected": [{"source": "it-security-policy.md", "evidence": "SMS codes are allowed only as a temporary fallback"}], "tags": ["semantic"]}
+{"id": "q21", "question": "I left my laptop in a taxi, what should I do?", "expected": [{"source": "it-security-policy.md", "evidence": "within 1 hour of noticing the loss"}], "tags": ["semantic"]}
+{"id": "q22", "question": "How do I report a suspicious email?", "expected": [{"source": "it-security-policy.md", "evidence": "Report phishing"}], "tags": ["keyword"]}
+{"id": "q23", "question": "How much money do I get per day on a trip abroad?", "expected": [{"source": "finance-expenses.md", "evidence": "50 EUR per day abroad"}], "tags": ["semantic"]}
+{"id": "q24", "question": "Which form do I use to claim expenses?", "expected": [{"source": "finance-expenses.md", "evidence": "form FIN-207"}], "tags": ["keyword"]}
+{"id": "q25", "question": "FIN-207 submission deadline", "expected": [{"source": "finance-expenses.md", "evidence": "within 30 days after the trip"}], "tags": ["identifier"]}
+{"id": "q26", "question": "Will the company pay for drinks at the hotel bar?", "expected": [{"source": "finance-expenses.md", "evidence": "Alcohol, fines"}], "tags": ["semantic"]}
+{"id": "q27", "question": "When is a taxi reimbursed?", "expected": [{"source": "finance-expenses.md", "evidence": "between 23:00 and 06:00"}], "tags": ["keyword"]}
+{"id": "q28", "question": "დაზიანებული საქონლის რეგისტრაციისთვის რომელი ფორმა გამოიყენება?", "expected": [{"source": "warehouse-instructions-ka.md", "evidence": "WH-3381 ფორმით"}], "tags": ["ka"]}
+{"id": "q29", "question": "WH-3381 რა ვადაში უნდა შეივსოს?", "expected": [{"source": "warehouse-instructions-ka.md", "evidence": "24 საათის განმავლობაში"}], "tags": ["ka", "identifier"]}
+{"id": "q30", "question": "რამდენად ხშირად ტარდება ინვენტარიზაცია?", "expected": [{"source": "warehouse-instructions-ka.md", "evidence": "კვარტალში ერთხელ"}], "tags": ["ka"]}
+{"id": "q31", "question": "რომელ საათამდე უნდა შემოვიდეს შეკვეთა, რომ იმავე დღეს გაიგზავნოს?", "expected": [{"source": "warehouse-instructions-ka.md", "evidence": "14:00-მდე"}], "tags": ["ka"]}
+{"id": "q32", "question": "რა უნდა ეცვას თანამშრომელს საწყობში?", "expected": [{"source": "warehouse-instructions-ka.md", "evidence": "დამცავი ფეხსაცმელი"}], "tags": ["ka", "semantic"]}
+{"id": "q33", "question": "რამდენი ხანი გრძელდება გამოსაცდელი პერიოდი?", "expected": [{"source": "onboarding-ka.md", "evidence": "გამოსაცდელი ვადა სამი თვეა"}], "tags": ["ka"]}
+{"id": "q34", "question": "ვინ ეხმარება ახალ თანამშრომელს პირველ თვეებში?", "expected": [{"source": "onboarding-ka.md", "evidence": "ენიჭება მენტორი"}], "tags": ["ka", "semantic"]}
+{"id": "q35", "question": "რამდენი დღე ანაზღაურებადი შვებულება მეკუთვნის წელიწადში?", "expected": [{"source": "hr-leave-policy.md", "evidence": "24 working days"}], "tags": ["ka", "cross-lingual"]}
+{"id": "q36", "question": "ლეპტოპი დავკარგე, ვის და რა ვადაში უნდა ვაცნობო?", "expected": [{"source": "it-security-policy.md", "evidence": "within 1 hour of noticing the loss"}], "tags": ["ka", "cross-lingual"]}
+{"id": "q37", "question": "What documents must a new employee bring on the first day?", "expected": [{"source": "onboarding-ka.md", "evidence": "პირადობის მოწმობის ასლი"}], "tags": ["cross-lingual"]}
+{"id": "q38", "question": "How often is warehouse stocktaking done?", "expected": [{"source": "warehouse-instructions-ka.md", "evidence": "კვარტალში ერთხელ"}], "tags": ["cross-lingual"]}
+{"id": "q39", "question": "How long does it take for a new hire to get ERP access?", "expected": [{"source": "onboarding-ka.md", "evidence": "2 სამუშაო დღეში"}], "tags": ["cross-lingual"]}
+{"id": "q40", "question": "Can I take vacation during my probation period?", "expected": [{"source": "hr-leave-policy.md", "evidence": "three-month probation period"}, {"source": "onboarding-ka.md", "evidence": "ყოველწლიური შვებულების აღება"}], "tags": ["semantic", "multi-source"]}
