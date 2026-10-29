@@ -53,6 +53,10 @@ def database():
             if not conn.execute("SELECT 1 FROM pg_database WHERE datname = %s", (dbname,)).fetchone():
                 conn.execute(f'CREATE DATABASE "{dbname}"')
     except psycopg.OperationalError as exc:
+        # Locally a missing database skips these tests; CI sets RAG_REQUIRE_DB so a
+        # broken database setup fails the run instead of passing with tests skipped
+        if os.getenv("RAG_REQUIRE_DB"):
+            raise
         pytest.skip(f"Postgres not reachable (docker compose up -d): {exc}")
 
     from app.db import close_pool, init_db

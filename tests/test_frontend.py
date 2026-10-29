@@ -1,4 +1,5 @@
 """Frontend checks: the JS tests (node --test) and a guard against HTML-string sinks."""
+import os
 import re
 import shutil
 import subprocess
@@ -12,6 +13,8 @@ STATIC = ROOT / "app" / "static"
 def test_markdown_renderer_js_tests():
     node = shutil.which("node")
     if not node:
+        if os.getenv("RAG_REQUIRE_NODE"):
+            pytest.fail("Node.js is required in CI")
         pytest.skip("Node.js not installed")
     result = subprocess.run([node, "--test", "tests/js/*.test.js"], cwd=ROOT,
                             capture_output=True, text=True, encoding="utf-8", timeout=60)

@@ -1,5 +1,7 @@
 # RAG Knowledge Assistant
 
+[![tests](https://github.com/omarnozadze/rag-knowledge-assistant/actions/workflows/tests.yml/badge.svg)](https://github.com/omarnozadze/rag-knowledge-assistant/actions/workflows/tests.yml)
+
 Production-style portfolio project for asking questions over private documents.
 
 ## Features
@@ -452,6 +454,12 @@ real model, can't tell `ABC-10293` from `ABC-10294`), the LLM answer is stubbed,
 `OPENAI_API_KEY` is cleared so a call that slips through fails instead of costing money.
 Database tests are skipped if Postgres isn't running.
 
+**CI:** `.github/workflows/tests.yml` runs the whole suite on every push and pull
+request, against the same `pgvector/pgvector:pg17` image as docker-compose, with Node.js
+for the JavaScript tests. There, a missing database or Node.js fails the run instead of
+skipping tests (`RAG_REQUIRE_DB`, `RAG_REQUIRE_NODE`), so a green badge means every test
+actually ran.
+
 - `tests/test_units.py`: chunking and overlap, extraction, identifier and language
   detection, embedding batching and order
 - `tests/test_search.py`: the retrieval behaviours the eval measured, pinned down:
@@ -496,5 +504,5 @@ Example question body:
 5. Evaluation dataset and retrieval metrics (done, v0.4); answer and citation
    correctness (LLM-as-judge) still to add
 6. Observability, latency and cost tracking
-7. Docker + CI/CD (automated tests done; CI pipeline still to add)
+7. ~~Docker + CI~~ (tests run on GitHub Actions); deployment still to add
 8. ~~Streaming answers~~ (v0.8)
