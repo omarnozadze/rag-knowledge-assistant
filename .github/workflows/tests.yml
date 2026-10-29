@@ -1,0 +1,54 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+
+    # Same image as docker-compose.yml, so CI tests the real pgvector setup
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: rag
+          POSTGRES_PASSWORD: rag
+          POSTGRES_DB: rag
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U rag -d rag"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+
+    env:
+      # conftest.py derives the rag_test database from this and clears OPENAI_API_KEY:
+      # CI never calls OpenAI
+      DATABASE_URL: postgresql://rag:rag@localhost:5432/rag
+      # Fail instead of skipping when the database or Node.js is missing
+      RAG_REQUIRE_DB: "1"
+      RAG_REQUIRE_NODE: "1"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+
+      # For the Markdown renderer's tests (node --test)
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - run: pip install -r requirements-dev.txt
+
+      - run: pytest -v
